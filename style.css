@@ -25,3 +25,13 @@ footer { display: flex; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--
 @media (max-width: 640px) { main { margin: 38px auto; } h1 { font-size: 28px; } }
 #theme-toggle { margin-left: auto; padding: 0; border: 0; color: var(--link); background: none; font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 #theme-toggle:hover { text-decoration: none; }
+
+#patch-notes { scroll-margin-top: 24px; }
+.notes-intro, .release-note { color: var(--muted); font-size: 13px; }
+.release { border-top: 1px solid var(--border); padding: 16px 0; }
+.release h3 { margin: 0 0 8px; font-size: 16px; }
+.release p { margin: 8px 0 0; }
+.release ul { margin: 0; padding-left: 22px; }
+.release li { margin: 6px 0; }
+summary { color: var(--link); cursor: pointer; padding: 10px 0; }
+summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }

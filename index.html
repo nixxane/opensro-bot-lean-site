@@ -14,7 +14,7 @@
     <h1>OpenSRO Bot Lean</h1>
     <p>A compact bot for combat, potions, pet loot and town trips.</p>
     <p class="download"><a class="install" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install / update bot</a></p>
-    <p class="version"><a id="release" href="https://github.com/nixxane/opensro-bot-lean/commits/main/">View latest version</a></p>
+    <p class="version"><a id="release" href="https://github.com/nixxane/opensro-bot-lean/commits/main/">View latest version</a> · <a href="#patch-notes">Patch notes</a></p>
     <h2>Quick setup</h2>
     <ol>
       <li>Install <a href="https://www.tampermonkey.net/">Tampermonkey</a> in your browser.</li>
@@ -22,6 +22,63 @@
       <li>Save your hunting spot, choose skills and set your loot and potion options. Press <kbd>F8</kbd> to start.</li>
     </ol>
     <p class="controls"><kbd>F8</kbd> Start / stop · <kbd>F7</kbd> Fold · <kbd>Shift + F7</kbd> Hide / show</p>
+    <section id="patch-notes" aria-labelledby="patch-notes-title">
+      <h2 id="patch-notes-title">Patch notes</h2>
+      <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/654eb75">1.2.39</a> · Bug reports</h3>
+        <ul>
+          <li>Preview diagnostics and add an explanation under Settings → Send bug report.</li>
+          <li>Optionally capture and review a screenshot before sending. Nothing uploads automatically.</li>
+        </ul>
+        <p class="release-note">Screenshot delivery is confirmed working after a reporting-service fix.</p>
+      </article>
+      <details>
+        <summary>Earlier updates · 1.2.29–1.2.38</summary>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9fd4efc">1.2.38</a> · Abnormal pills</h3>
+          <p>Optional restocking of the strongest abnormal-status pills, with editable low-stock and refill amounts shared across supply trips.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/24f4c41">1.2.37</a> · Alchemy cleanup</h3>
+          <p>Closes the native alchemy window when automation stops, while preserving any outstanding result. The reported movement freeze still needs live confirmation.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/73ee079">1.2.36</a> · Weapon alchemy</h3>
+          <p>Select a bag weapon, target + level, attempt limit and optional lucky powder. Waits for each confirmed result before trying again.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9edd69e">1.2.35</a> · Diagnostics</h3>
+          <p>Clearer waiting reasons and Copy diagnostics for bug reports. Diagnostics omit names, chat, account details and locations.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5c0a1a6">1.2.34</a> · Easier updates</h3>
+          <p>Checks for new versions on load and every 15 minutes. An Update button opens the installer; installation and reloading stay manual.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/22f7b0b">1.2.33</a> · Shared refill amounts</h3>
+          <p>HP refill to and MP refill to now apply to walking restock and town trips, including full bags and revival. Enter potion counts, such as 1000 MP.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/01ffd99">1.2.32</a> · Auto-recruit recovery</h3>
+          <p>Missing party listings can retry after fresh idle state without toggling Auto-recruit. Retries are limited to once every 30 seconds.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/80de647">1.2.31</a> · Pet pickup</h3>
+          <p>Removed unnecessary potion waits, improved temporary pickup retries and prioritized drops nearest the pet. Pets continue collecting alongside combat.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5db34b7">1.2.30</a> · Beginner speed scroll</h3>
+          <p>Allows beginner +100% speed-scroll use during ordinary combat casts, with clearer waiting reasons and bounded confirmation retries.</p>
+        </article>
+        <article class="release">
+          <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d4c6841">1.2.29</a> · Reverse-return arrival</h3>
+          <p>Increased reverse-return arrival tolerance to 30 metres for normal and death-recovery town trips.</p>
+        </article>
+        <p class="release-note">These notes describe released changes. Live checks for earlier pickup, travel and party stalls remain pending.</p>
+        <p><a href="https://github.com/nixxane/opensro-bot-lean/commits/main/">Full development history</a></p>
+      </details>
+    </section>
     <footer><a href="https://github.com/nixxane/opensro-bot-lean#readme">Full guide</a><a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a><a href="https://github.com/nixxane/opensro-bot-lean/issues">Report an issue</a><button id="theme-toggle" type="button" hidden>Dark mode</button></footer>
   </main>
 </body>
