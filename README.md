@@ -1,8 +1,8 @@
-# OpenSRO Bot Lean website
+# nixxane bot website
 
 [Visit the website](https://nixxane.github.io/opensro-bot-lean-site/)
 
-A standalone static website for [OpenSRO Bot Lean](https://github.com/nixxane/opensro-bot-lean). This repository contains only the website; the bot stays in its own repository.
+A standalone static website for [nixxane bot](https://github.com/nixxane/opensro-bot-lean). This repository contains only the website; the bot stays in its own repository.
 
 Edit `index.html`, `style.css` and `site.js`. GitHub Pages publishes the root of `main` automatically. The version label reads the bot's public metadata. Keep the short patch notes in `index.html` updated for each release, newest first; reporting-service fixes do not change the bot version.
 
