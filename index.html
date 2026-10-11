@@ -3,67 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#141c19">
-  <meta name="description" content="OpenSRO Bot Lean: a compact Tampermonkey companion for combat, potions, selective pet loot and configured town trips. Install the bot and get started.">
-  <title>OpenSRO Bot Lean — A lighter way to play</title>
+  <meta name="description" content="Install OpenSRO Bot Lean, a compact Tampermonkey bot for OpenSRO.">
+  <title>OpenSRO Bot Lean</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
   <script src="./site.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="brand" href="#" aria-label="OpenSRO Bot Lean home"><span class="brand-mark" aria-hidden="true">L</span><span>OpenSRO <b>Bot Lean</b></span></a>
-    <nav aria-label="Main navigation"><a href="#features">Features</a><a href="#setup">Get started</a><a class="source-link" href="https://github.com/nixxane/opensro-bot-lean">GitHub <span aria-hidden="true">↗</span></a></nav>
-  </header>
-  <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="tiny-diamond" aria-hidden="true"></span> A companion for the journey</p>
-        <h1 id="hero-title">A lighter way<br>to play <em>OpenSRO.</em></h1>
-        <p class="intro">Your combat rotation, your loot rules, your hunting spot. A compact bot that keeps the essentials close and the controls in your hands.</p>
-        <div class="hero-actions"><a class="button primary" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install Bot Lean <span aria-hidden="true">↗</span></a><a class="text-link" href="#setup">First time? Start here <span aria-hidden="true">↓</span></a></div>
-        <p class="install-note">Requires <a href="https://www.tampermonkey.net/">Tampermonkey</a> · <a id="release" href="https://github.com/nixxane/opensro-bot-lean/commits/main/">View latest version</a></p>
-      </div>
-      <div class="preview-wrap">
-        <div class="orbit" aria-hidden="true"></div>
-        <div class="preview-label"><span>01 / THE ESSENTIALS</span><span>A leaner toolkit</span></div>
-        <figure class="bot-preview" aria-label="Illustrative overview of the bot controls">
-          <div class="panel-header"><span class="panel-brand"><span class="small-diamond" aria-hidden="true"></span> OpenSRO Bot Lean</span><span class="panel-key">F8</span></div>
-          <div class="panel-tabs"><span class="selected">Combat</span><span>Loot</span><span>Supplies</span><span>Settings</span></div>
-          <div class="panel-content">
-            <div class="panel-heading"><span>Make the hunt yours.</span><span class="panel-sub">Combat setup</span></div>
-            <div class="setting-line"><span>Hunting area</span><span class="setting-value">Your saved spot <span class="check" aria-hidden="true">✓</span></span></div>
-            <div class="setting-line"><span>Attack rotation</span><span class="setting-value">Your learned skills</span></div>
-            <div class="setting-line"><span>Loot collector</span><span class="setting-value">Pickup pet</span></div>
-            <div class="panel-section"><span class="panel-sub">Configured town cycle</span><div class="mini-route"><span>Recall</span><i aria-hidden="true"></i><span>Refill</span><i aria-hidden="true"></i><span>Repair</span><i aria-hidden="true"></i><span>Return</span></div></div>
-            <div class="panel-bottom"><span><span class="status-dot" aria-hidden="true"></span> Ready when you are</span><span class="fake-button">Start / Stop <kbd>F8</kbd></span></div>
-          </div>
-          <figcaption>Illustrative panel. Configure your bot inside the game.</figcaption>
-        </figure>
-        <div class="preview-foot"><span class="line" aria-hidden="true"></span><span>Less clutter. More control.</span></div>
-      </div>
-    </section>
-    <div class="facts wrap" aria-label="At a glance"><span><b>01</b> Compact userscript</span><span><b>02</b> Per-character settings</span><span><b>03</b> Public source on GitHub</span></div>
-    <section id="features" class="features wrap" aria-labelledby="features-title">
-      <div class="section-intro"><p class="eyebrow">Built around your hunt</p><h2 id="features-title">The essentials.<br><em>Working together.</em></h2><p>Set up the parts you need. Keep direct control with a single shortcut.</p><a class="text-link" href="https://github.com/nixxane/opensro-bot-lean#readme">Read the full guide <span aria-hidden="true">↗</span></a></div>
-      <div class="feature-list">
-        <article><span class="feature-number">01</span><div><h3>Fight your way</h3><p>Choose your learned attack skills, buffs and imbue. Set HP and MP potion thresholds, and optionally use the beginner +100% speed scroll.</p><div class="tags"><span>Combat rotations</span><span>Automatic potions</span></div></div></article>
-        <article><span class="feature-number">02</span><div><h3>Give your loot a plan</h3><p>Choose collection categories and name rules. With a summoned pickup pet, collect alongside combat and keep the character focused on the hunt.</p><div class="tags"><span>Selective pickup</span><span>Pet collection</span></div></div></article>
-        <article><span class="feature-number">03</span><div><h3>Make the return trip</h3><p>Save your hunting spot for walk-back. Configure the Hotan town cycle to recall, handle pet loot, refill potions, repair and reverse to the last scroll point.</p><div class="tags"><span>Saved hunt spots</span><span>Configured town services</span></div></div></article>
-      </div>
-    </section>
-    <section class="town-section" aria-labelledby="town-title">
-      <div class="wrap town-inner"><div><p class="eyebrow">The long road, simplified</p><h2 id="town-title">A town trip.<br><em>With a way back.</em></h2><p>Save each service point once in Supplies. The enabled cycle uses your potion and capacity triggers to start the trip.</p><a class="text-link" href="https://github.com/nixxane/opensro-bot-lean#automatic-town-trips">Town setup guide <span aria-hidden="true">↗</span></a></div>
-      <div class="journey"><ol><li><span class="route-node">1</span><div><h3>Recall to Hotan</h3><p>Use the saved arrival area and town services.</p></div></li><li><span class="route-node">2</span><div><h3>Store, refill &amp; repair</h3><p>Store pet elixirs, sell eligible pet loot, top up X-Large potions and repair gear.</p></div></li><li><span class="route-node">3</span><div><h3>Reverse back to hunt</h3><p>Return to the last scroll point, with a 30-metre arrival tolerance.</p></div></li></ol><p class="journey-note">Requires saved services, gold, travel scrolls and bag space. Live confirmation of recent recovery fixes is still pending.</p></div></div>
-    </section>
-    <section id="setup" class="setup wrap" aria-labelledby="setup-title">
-      <div class="setup-heading"><div><p class="eyebrow">Ready for the road?</p><h2 id="setup-title">Three steps to <em>get started.</em></h2></div><a class="button primary" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install the userscript <span aria-hidden="true">↗</span></a></div>
-      <ol class="setup-steps"><li><span>01 / PREPARE</span><h3>Add Tampermonkey</h3><p>Install <a href="https://www.tampermonkey.net/">Tampermonkey</a> in your browser. Disable any other OpenSRO bot script before using Lean.</p></li><li><span>02 / INSTALL</span><h3>Install, then reload</h3><p>Open the userscript link and confirm installation in Tampermonkey. Reload the game and check the version in the bot panel.</p></li><li><span>03 / CONFIGURE</span><h3>Save your hunting spot</h3><p>Choose your skills in Combat, collection rules in Loot and potion thresholds in Supplies. Press <kbd>F8</kbd> to start.</p></li></ol>
-      <div class="shortcuts"><span class="shortcuts-title">Keep control</span><span><kbd>F8</kbd> Start / stop</span><span><kbd>F7</kbd> Fold panel</span><span><kbd>Shift + F7</kbd> Hide / show panel</span></div>
-    </section>
-    <aside class="help wrap"><div><h3>Something holding up the journey?</h3><p>Check the status in the panel. For town-return problems, use <b>Supplies → Save return diagnostics</b> before reloading.</p></div><a class="text-link" href="https://github.com/nixxane/opensro-bot-lean/issues">Report an issue <span aria-hidden="true">↗</span></a></aside>
+  <main>
+    <h1>OpenSRO Bot Lean</h1>
+    <p>A compact bot for combat, potions, pet loot and town trips.</p>
+    <p class="download"><a class="install" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install / update bot</a></p>
+    <p class="version"><a id="release" href="https://github.com/nixxane/opensro-bot-lean/commits/main/">View latest version</a></p>
+    <h2>Quick setup</h2>
+    <ol>
+      <li>Install <a href="https://www.tampermonkey.net/">Tampermonkey</a> in your browser.</li>
+      <li>Install the bot above, disable other OpenSRO bot scripts, then reload the game.</li>
+      <li>Save your hunting spot, choose skills and set your loot and potion options. Press <kbd>F8</kbd> to start.</li>
+    </ol>
+    <p class="controls"><kbd>F8</kbd> Start / stop · <kbd>F7</kbd> Fold · <kbd>Shift + F7</kbd> Hide / show</p>
+    <footer><a href="https://github.com/nixxane/opensro-bot-lean#readme">Full guide</a><a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a><a href="https://github.com/nixxane/opensro-bot-lean/issues">Report an issue</a></footer>
   </main>
-  <footer class="wrap"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">L</span><span>OpenSRO <b>Bot Lean</b></span></a><p>A compact companion. An independent community project.</p><div><a href="https://github.com/nixxane/opensro-bot-lean">Bot source</a><a href="https://github.com/nixxane/opensro-bot-lean-site">Website source</a></div></footer>
 </body>
 </html>
