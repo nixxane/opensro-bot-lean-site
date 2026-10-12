@@ -26,12 +26,38 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/bf4f238e9faa2fac003e106ce14a3f18f923aa6f">1.2.47</a> · SoX filter fix</h3>
+        <p>Loot → Equipment: only SoX now filters equipment only. Gold, potions and other items follow their own switches again.</p>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/44faf8f0fe5a03ab9398552b8e3cec7c444699c0">1.2.46</a> · SoX-only equipment</h3>
+        <p>New Loot option to collect only Seal of Star, Moon and Sun equipment and leave plain gear behind. Works for character and pet collection.</p>
+        <p class="release-note">Needs the item catalogue, which loads automatically; nothing is taken until it has. Version 1.2.46 also skipped gold and other items, which 1.2.47 corrects.</p>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/c605e4e17ff8fcf9a0f68e74e6989ce6764d0b58">1.2.45</a> · Smoother scrolling</h3>
+        <ul>
+          <li>The panel keeps its scroll position when you add or remove skills, save town points or change wardrobe filters.</li>
+          <li>The scrolling area now fits the window height, and wheel scrolling no longer moves the game behind the panel.</li>
+        </ul>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9b08cddb60ad64dc553ed179d559a37d9face2e3">1.2.44</a> · Cleaner panel</h3>
+        <p>Removed duplicate controls: the second weapon imbue picker, the Pet: elixirs only button, the Copy and Save diagnostics buttons, and Import original bot settings. Settings → Send bug report remains.</p>
+        <p class="release-note">Choose Pickup pet in the Collector dropdown yourself; the loot presets no longer change the collector.</p>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/588309c1d60d2e4898cd756ddb119df881b75419">1.2.43</a> · Anti-stuck</h3>
+        <p>Settings → Anti-stuck watches for kills, XP, gold, pickups and damage to your target. With no progress for 3 minutes it drops the target, then walks back to the hunting spot, then stops hunting after the set number of failed recoveries.</p>
+        <p class="release-note">Time and recovery limit are adjustable. Resting, buffing, looting, shopping and town trips never count as stuck.</p>
+      </article>
+      <details>
+        <summary>Earlier updates · 1.2.29–1.2.42</summary>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/33b56594fdbe1a47960f886b583ada88f20904a5">1.2.42</a> · Session stats</h3>
         <p>Settings → Session stats shows hunting time, XP/hour, net gold, confirmed kills, deaths, potion use and pickups. Pauses when hunting stops and keeps totals across toggles.</p>
         <p class="release-note">Stats stay local to the page. Reset session, reloading or changing character clears them.</p>
       </article>
-      <details>
-        <summary>Earlier updates · 1.2.29–1.2.41</summary>
       <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/f4ec1d3ac902d7e709e77aeea1c16c24bccf1ab2">1.2.41</a> · Buff weapon swapping</h3>
         <p>Save multiple buff weapon sets in Combat → Buffs &amp; imbue and assign each buff to its set. Confirms each swap, casts the buffs and restores your original combat gear.</p>
