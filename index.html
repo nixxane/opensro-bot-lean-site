@@ -26,6 +26,11 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/1ec1b914c963570a25e0531d880c29c396934e9b">1.2.53</a> · Accept resurrection</h3>
+        <p>New Settings → Party switch: when you are dead and a party member casts Rebirth on you, the bot answers Yes. Works while hunting or stopped.</p>
+        <p class="release-note">Off by default. Only party members are answered; offers from other players and mutation offers are left to you.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0eeb31d1aacdc9b3dec3499bf7a0bfdbc45aa921">1.2.52</a> · Party accept fix</h3>
         <p>Fixed auto-accept ignoring applicants after the first party member joined and left. The game could keep sending applications while the bot had lost track of your listing; it now accepts them as long as you are the leader (or solo) and there is room.</p>
         <p class="release-note">Found from a bug report. Leader, capacity and deadline checks are unchanged.</p>
