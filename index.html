@@ -26,6 +26,11 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/bab607f0daf6a9875cf37fa53716714b61aadd52">1.2.64</a> · Automatic reconnect</h3>
+        <p>When the connection to the game is lost, for example during a server restart, the bot now reconnects by itself: it waits for the game's own retries, asks the game to resume, and otherwise re-enters the world with the login the page already holds. Hunting that was running resumes once the character is back at the hunting spot.</p>
+        <p class="release-note">Always on, with no switch. It never types or stores your password; if the login is gone after a restart, the status line says so. Logging out or disconnecting yourself cancels it.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/66c607591627359eb8641d855ba0576e58914236">1.2.63</a> · English everywhere</h3>
         <p>Every message the bot can show is now English, including log lines, error text and wardrobe messages that were still partly Turkish. The build now refuses to ship any Turkish text.</p>
       </article>
