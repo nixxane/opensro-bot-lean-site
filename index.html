@@ -26,6 +26,11 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0eeb31d1aacdc9b3dec3499bf7a0bfdbc45aa921">1.2.52</a> · Party accept fix</h3>
+        <p>Fixed auto-accept ignoring applicants after the first party member joined and left. The game could keep sending applications while the bot had lost track of your listing; it now accepts them as long as you are the leader (or solo) and there is room.</p>
+        <p class="release-note">Found from a bug report. Leader, capacity and deadline checks are unchanged.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/228c5d3a65d2612665af44c7137bd01ed7f24be8">1.2.51</a> · SoX alerts</h3>
         <p>When the bot confirms a pickup of Star, Moon or Sun equipment it shows the item name and tier and plays a short chime. Settings → Session stats now counts SoX found.</p>
         <p class="release-note">On by default; switch it off or test the sound under Loot. Needs the item catalogue, which loads when hunting starts. Only bot pickups are announced.</p>
