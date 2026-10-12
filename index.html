@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5b2a20a1603f0487c6988fbe69ce18106cfdd159">1.2.65</a> · Hunting continues after a resurrection</h3>
+        <ul>
+          <li>If hunting was running when the character died, it now resumes after a resurrection you accepted, whatever On death is set to. At the hunting spot it just starts, a short way off it walks back first, and elsewhere it stays stopped and tells you.</li>
+          <li>With Accept resurrection on and a party member in view, a bot set to revive waits up to 20 seconds instead of 5 before reviving itself, and never revives while a resurrection offer is open.</li>
+        </ul>
+        <p class="release-note">Only accepted resurrections resume hunting; a revive you do yourself does not.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/bab607f0daf6a9875cf37fa53716714b61aadd52">1.2.64</a> · Automatic reconnect</h3>
         <p>When the connection to the game is lost, for example during a server restart, the bot now reconnects by itself: it waits for the game's own retries, asks the game to resume, and otherwise re-enters the world with the login the page already holds. Hunting that was running resumes once the character is back at the hunting spot.</p>
         <p class="release-note">Always on, with no switch. It never types or stores your password; if the login is gone after a restart, the status line says so. Logging out or disconnecting yourself cancels it.</p>
