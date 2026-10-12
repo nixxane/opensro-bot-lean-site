@@ -26,6 +26,11 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/80750896e176c181c99c760bb7bd7d2fe4ba1535">1.2.55</a> · Mastery gap</h3>
+        <p>Auto mastery can now leave a gap: Settings → Auto mastery → Keep this many levels below my level. With a gap of 2 on a level 30 character, no mastery goes past 28.</p>
+        <p class="release-note">The default is 0, which behaves as before. The game's own limits (your level, 120) still apply.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9ddf8ecc67fed952f890dda6414deb24c0f0a06a">1.2.54</a> · Auto mastery</h3>
         <p>New Settings → Auto mastery: tick the masteries you want and the bot spends skill points to raise them one confirmed level at a time, in the order you chose. It follows the game's rules (never past your character level or 120, level 0 is free) and works while hunting is stopped.</p>
         <p class="release-note">Off by default. If the server refuses a level, the bot waits a minute before retrying that mastery. Skills are not touched.</p>
