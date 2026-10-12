@@ -26,6 +26,16 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/1d6d2a95f56e58749bd7a6dfb0d93e45c179435d">1.2.70</a> · Automatic town setup</h3>
+        <ul>
+          <li>New <strong>Auto-set town services</strong> button in Supplies. Use a return scroll, press it where you land, and the bot fills the arrival point, warehouse, potion merchant, repair merchant and world statue for you. No more selecting and saving each NPC.</li>
+          <li>Works for Hotan, Jangan, Donwhang, Constantinople and Samarkand, using the server's own NPC positions. The bot recognises the town from where you stand, so recall can be bound to any of them.</li>
+          <li>It only fills empty entries; <strong>Redo all automatically</strong> replaces every saved point. Manual saves still work and override the automatic ones.</li>
+          <li>The section is now called <strong>Scroll town cycle</strong> instead of Hotan scroll town cycle.</li>
+        </ul>
+        <p class="release-note">Confirmed working in the game. Towns other than the one tested use the same method and data, so report any that stall.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5bf75142e636cc258dba209f87bd754fb5f16367">1.2.69</a> · The status line says why the pet is not collecting</h3>
         <ul>
           <li>When the pickup pet is ready but nothing is collected, the status line and Send bug report now count the drops in view and say why each is skipped: item type switched off, too far from you, outside the hunting area, owned by another player, too far from the pet, pet not ready, or no room in the bag.</li>
