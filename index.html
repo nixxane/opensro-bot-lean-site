@@ -26,6 +26,15 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/15393b723282ef3730213a7e47b9c6d7912aba90">1.2.66</a> · Berserk by monster kind, and stones go to the warehouse</h3>
+        <ul>
+          <li>Berserk is now a list of monster kinds (Giants, Titans, Uniques, Elites, Party monsters, Champions, Normal monsters) instead of one dropdown. Only Giants are ticked by default, so champions no longer use it. Profiles that had Berserk off or on for everything keep that; Champion and above becomes Giants only.</li>
+          <li>Magic stones and attribute stones have their own switches in Loot, each keeping your old Other alchemy items setting.</li>
+          <li>Both kinds of stone are stored in the warehouse on the next town trip, from the pet and from your own bag, and are never sold. Magic stones include the Astral, Luck, Steady and Immortal stones.</li>
+        </ul>
+        <p class="release-note">Attribute tablets are not stones; they stay under Other alchemy items and are sold from the pet like before.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5b2a20a1603f0487c6988fbe69ce18106cfdd159">1.2.65</a> · Hunting continues after a resurrection</h3>
         <ul>
           <li>If hunting was running when the character died, it now resumes after a resurrection you accepted, whatever On death is set to. At the hunting spot it just starts, a short way off it walks back first, and elsewhere it stays stopped and tells you.</li>
