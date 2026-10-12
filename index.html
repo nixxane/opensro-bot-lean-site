@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/98c3c1b8c8fff046788a09f0f2c54f55761e61f7">1.2.57</a> · Normal attack reasons</h3>
+        <ul>
+          <li>When a character uses normal attacks instead of skills, the status line now says why (not learned, paused after a server rejection, cooling down, not enough MP, MP below your minimum, or an empty rotation). The reason also goes to Recent activity and bug reports, as counts only.</li>
+          <li>A skill is no longer paused after a slow game update: it is only treated as rejected once a newer update arrived and its cooldown still had not started.</li>
+        </ul>
+        <p class="release-note">The cause of skills occasionally being skipped is not confirmed yet; this release makes it visible. Tell us the reason you see.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/a39bcd7db975c95e4ccc7525c83dc48def8072c1">1.2.56</a> · Auto skills and reserve</h3>
         <ul>
           <li>Settings → Auto mastery and skills can now upgrade the skills in your attack rotations, buffs and imbue, learning the next level as soon as the game's requirements are met.</li>
