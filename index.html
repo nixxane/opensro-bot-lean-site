@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5745d8ca7beaab2b75dfd33319b5857c05d5543b">1.2.58</a> · Safety fixes</h3>
+        <ul>
+          <li>The SoX warehouse deposit no longer takes gear you rely on: a saved buff set's weapon or shield, the weapon chosen for alchemy, or anything matching your Keep names. Versions 1.2.50 to 1.2.57 could deposit those from your bag.</li>
+          <li>An error in an optional feature (party automation, auto mastery, SoX alerts) is now logged and skipped instead of stopping hunting.</li>
+        </ul>
+        <p class="release-note">If a buff weapon was deposited by an earlier version, take it back from the warehouse and save the buff set again.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/98c3c1b8c8fff046788a09f0f2c54f55761e61f7">1.2.57</a> · Normal attack reasons</h3>
         <ul>
           <li>When a character uses normal attacks instead of skills, the status line now says why (not learned, paused after a server rejection, cooling down, not enough MP, MP below your minimum, or an empty rotation). The reason also goes to Recent activity and bug reports, as counts only.</li>
