@@ -35,3 +35,15 @@ footer { display: flex; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--
 .release li { margin: 6px 0; }
 summary { color: var(--link); cursor: pointer; padding: 10px 0; }
 summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+
+/* Setup guide */
+h3 { margin: 26px 0 8px; font-size: 16px; }
+.back { margin: 0 0 18px; font-size: 14px; }
+.toc { margin: 14px 0 0; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 14px; }
+.shot { display: block; max-width: 100%; height: auto; margin: 16px auto; border: 1px solid var(--border); border-radius: 4px; }
+.note { margin: 14px 0; padding: 2px 0 2px 14px; border-left: 3px solid var(--link); color: var(--muted); font-size: 14px; }
+ul { margin: 0; padding-left: 22px; }
+table.messages { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+table.messages th, table.messages td { padding: 8px 10px; border-top: 1px solid var(--border); text-align: left; vertical-align: top; }
+table.messages th { color: var(--muted); font-weight: 600; }
+@media (max-width: 640px) { table.messages th, table.messages td { padding: 6px 4px; } }
