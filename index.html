@@ -26,6 +26,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5bf75142e636cc258dba209f87bd754fb5f16367">1.2.69</a> · The status line says why the pet is not collecting</h3>
+        <ul>
+          <li>When the pickup pet is ready but nothing is collected, the status line and Send bug report now count the drops in view and say why each is skipped: item type switched off, too far from you, outside the hunting area, owned by another player, too far from the pet, pet not ready, or no room in the bag.</li>
+          <li>Finish current fight before character pickup only applies to a character collector. A pickup pet collects during fights whatever it is set to; this is now written in the README.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9e9b050f9742c59da8ba9a8bee166242826064a5">1.2.68</a> · Party members no longer count as other players' targets</h3>
         <ul>
           <li>With "Avoid other players' targets" on (the default), the bot skipped every monster a party member, or a party member's pet, had just hit. In a party that left it with few or no targets. Hits by party members now count as yours; strangers and their pets still count.</li>
