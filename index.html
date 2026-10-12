@@ -26,6 +26,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/f0ab7a73b12871dae4a9190b42e02b36a708cee8">1.2.72</a> · The town trip no longer waits forever at the wrong arrival point</h3>
+        <ul>
+          <li>The bot waited for the return scroll to bring the character near the saved arrival point. If that point was saved somewhere else in town, the status stayed on "Waiting for arrival area: 76 m from saved point; tolerance 50 m" and the trip never continued.</li>
+          <li>Now, after a recall the game confirmed, once the character has stood still for three seconds in a known town, that spot is saved as the arrival point and the trip continues. It only does this in the town the saved services belong to.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0fe4fa6282a8d5d0564a268940ff2f697b55b308">1.2.71</a> · Discord</h3>
         <ul>
           <li>New <strong>Discord</strong> button at the top of the panel, next to the version. Updates, suggestions and bug reports now have a home: <a href="https://discord.gg/Ju4WtWCRTa">https://discord.gg/Ju4WtWCRTa</a>.</li>
