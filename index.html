@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/90656efe95f98c33b0ec372a20c8ca5ceda79cba">1.2.61</a> · Pet potions and vigor thresholds</h3>
+        <ul>
+          <li>New Supplies → Automatic potion use: Use recovery kits on my pets. When an attack or pickup pet drops below the HP you set, the bot uses the smallest recovery kit that covers the missing HP. Your own potions always go first.</li>
+          <li>Vigor potions already worked automatically; their HP and MP thresholds can now be changed in the same section.</li>
+        </ul>
+        <p class="release-note">Pet kits are off by default and are not bought in town yet.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/aaf69377ee7f5b75b082c113a653b18e9221cedd">1.2.60</a> · Town walk diagnostics</h3>
         <p>When a town trip stalls on the way to a merchant, the status line and bug reports now say why: waiting for collision data, no walkable route, or a blocked route. Bug reports also include whether collision data is loaded. No NPC or character names are included.</p>
         <p class="release-note">The README explains what to do for each message. The bot still never walks blindly through obstacles.</p>
