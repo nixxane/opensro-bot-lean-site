@@ -26,6 +26,12 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9e9b050f9742c59da8ba9a8bee166242826064a5">1.2.68</a> · Party members no longer count as other players' targets</h3>
+        <ul>
+          <li>With "Avoid other players' targets" on (the default), the bot skipped every monster a party member, or a party member's pet, had just hit. In a party that left it with few or no targets. Hits by party members now count as yours; strangers and their pets still count.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/ee86ba896038f7d7c987bd11afb8bb7896ac1e15">1.2.67</a> · The status line says why no monster is attacked</h3>
         <ul>
           <li>When the bot is "searching for an eligible target", it now counts the monsters in view and says why each was skipped: monster type switched off, level outside your limits, name filters, too far (Hunt radius or Chase distance), another player is fighting it, or recently given up. With nothing in view it says so.</li>
