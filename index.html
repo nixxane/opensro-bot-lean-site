@@ -26,6 +26,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/a68e8ba">1.2.85</a> · The map shows the ground again</h3>
+        <ul>
+          <li>The Map page showed only a black background in the game. The game now publishes its minimap tiles in a new compressed format inside a new kind of asset pack, which the bot could not read. It reads both now, so the minimap appears under the markers.</li>
+          <li>The same fix lets the bot read any other game picture that moves to the new packs, so icons keep working after future game updates.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/6d29fdc">1.2.84</a> · Map page</h3>
         <ul>
           <li>New Map page, first in the page list. It draws the game's own minimap around you with your hunting radius (yellow circle) and chase distance (dashed ring).</li>
