@@ -26,6 +26,17 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/164fe4f">1.2.87</a> · Heal and buff your party</h3>
+        <ul>
+          <li>New Party page. Tick "Buff and heal party members" and the bot supports the party with your own skills: a group heal when enough members are low, a heal on the lowest member, then party buffs on whoever does not have them yet. One cast at a time, after your own potions and before attacking.</li>
+          <li>Pick party buffs from your learned skills that can target a party member. Each goes to everyone, or only to the names you list.</li>
+          <li>It only casts on members you can see within the support range (30 m by default) and never walks to them. A buff that does not show up on a member after two tries waits a minute.</li>
+          <li>The top of the page lists your party with HP and MP bars, distance, and which of your buffs each member has.</li>
+          <li>The party options (auto-recruit, matching, resurrection) moved here from Settings.</li>
+        </ul>
+        <p class="release-note">Off by default. It runs while hunting; tick "Also while hunting is stopped" to support a party while you stand still.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/352001f">1.2.86</a> · Town page and new reasons to go to town</h3>
         <ul>
           <li>New Town page. It shows the trip as a row of pictures (return scroll, warehouse, potions, repair, reverse) with what each step still needs, and everything that starts a trip in one place. The scroll town cycle settings and Arrows and bolts moved here from Supplies.</li>
