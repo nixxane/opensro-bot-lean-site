@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/033eddac5905abc8d5425e6e3c74686a1deedc23">1.2.74</a> · Imbue is renewed before it runs out</h3>
+        <ul>
+          <li>The weapon imbue was only renewed when under 0.4 seconds were left, and only before a rotation skill. A skill takes a second or more to cast, so the imbue could run out while the skill was still on its way, and normal attacks never renewed it.</li>
+          <li>It is now renewed while 3 seconds are left (new setting <strong>Renew imbue when seconds left</strong> under Combat, Buffs &amp; imbue), before the next skill and before normal attacks too.</li>
+        </ul>
+        <p class="release-note">If the imbue skill's own cooldown is longer than its duration, the game itself can leave short gaps.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/e0bffee08cdf7895a979de9e7d23e8cc29cd280c">1.2.73</a> · New Discord invite</h3>
         <ul>
           <li>The old Discord invite link expired. The button, README, guide and site now use the new one: <a href="https://discord.gg/Y5H5ZyfQ7u">https://discord.gg/Y5H5ZyfQ7u</a>. If the button says the invite is invalid, update the bot.</li>
