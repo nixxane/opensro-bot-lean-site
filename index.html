@@ -26,6 +26,18 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/229ea28">1.2.88</a> · Small monsters first</h3>
+        <ul>
+          <li>While fighting a stronger monster (a giant, say), the bot now switches to a weaker monster that is hitting you, kills it, and goes back. Before, it kept hitting the giant while the small ones wore you down.</li>
+          <li>It only switches for monsters actually hitting you within chase distance, and only to a weaker class: two giants hitting you is no reason to switch.</li>
+          <li>A target below 25% HP is finished first, and it never switches in the middle of a cast.</li>
+          <li>The weakest attacker goes first (normal before champion, the most hurt one first), and it does not bounce back and forth while the giant keeps hitting.</li>
+          <li>The status line says when it happens, for example "switched to Mangyang (hitting you); back to Tiger Girl after".</li>
+          <li>The minimised icon could flash yellow for a moment after Stop all ended a walk back; it now shows the right colour straight away.</li>
+        </ul>
+        <p class="release-note">Always on; there is no switch for it.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/164fe4f">1.2.87</a> · Heal and buff your party</h3>
         <ul>
           <li>New Party page. Tick "Buff and heal party members" and the bot supports the party with your own skills: a group heal when enough members are low, a heal on the lowest member, then party buffs on whoever does not have them yet. One cast at a time, after your own potions and before attacking.</li>
