@@ -14,11 +14,13 @@ $$('.seg, .classes, #areas').forEach(g => g.addEventListener('click', e => {
 $$('.mini-ic img').forEach(i => i.onclick = () => i.classList.toggle('on'));
 
 // Start / stop, compact mode, clock
-$('#toggle').onclick = () => {
-  const s = $('#bot').classList.toggle('stopped');
-  $('#state').textContent = s ? 'Stopped' : 'Hunting';
-  $('#reason').textContent = s ? 'Press F8 to resume' : 'Attacking Tiger Girl · pet collecting';
-};
+function setState(stopped) {
+  $('#bot').classList.toggle('stopped', stopped);
+  $('#state').textContent = stopped ? 'Stopped' : 'Hunting';
+  $('#reason').textContent = stopped ? 'Press F8 to resume' : 'Attacking Tiger Girl · pet collecting';
+  syncOrb();
+}
+$('#toggle').onclick = () => setState(!$('#bot').classList.contains('stopped'));
 $('#mode').onclick = () => { const c = $('#bot').classList.toggle('compact'); $('#mode').textContent = c ? 'Wide' : 'Compact'; draw(); };
 let t = 5048;
 setInterval(() => {
@@ -100,3 +102,51 @@ setInterval(() => {
 addEventListener('resize', draw);
 requestAnimationFrame(draw);
 if (innerWidth < 1040) { $('#bot').classList.add('compact'); $('#mode').textContent = 'Wide'; }
+
+// Minimise: the X shrinks the panel to a small draggable icon; the bot keeps running.
+const orb = $('#orb'), store = { get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
+let alertMsg = '', alertTimer = 0, hiddenAll = false;
+function syncOrb() {
+  const stopped = $('#bot').classList.contains('stopped');
+  orb.classList.toggle('stopped', stopped);
+  orb.classList.toggle('alert', !!alertMsg);
+  $('#orbstate').textContent = alertMsg ? 'SoX picked up!' : stopped ? 'Stopped' : 'Hunting';
+  $('#orbreason').textContent = alertMsg || $('#reason').textContent;
+  orb.classList.toggle('left', orb.offsetLeft < 260);
+}
+function placeOrb(p) {
+  const x = Math.max(4, Math.min(innerWidth - 48, p.x)), y = Math.max(4, Math.min(innerHeight - 48, p.y));
+  orb.style.left = x + 'px'; orb.style.top = y + 'px'; return { x, y };
+}
+function minimise(on) {
+  if (on) {
+    const r = $('#minimise').getBoundingClientRect();
+    placeOrb(store.get('orbPos') || { x: r.right - 40, y: r.top - 12 });
+  }
+  $('#bot').hidden = on || hiddenAll; orb.hidden = !on || hiddenAll; $('#gone').hidden = !on || hiddenAll;
+  store.set('minimised', on); syncOrb();
+  clearTimeout(alertTimer);
+  // Demo: a SoX pickup a few seconds after minimising makes the icon pulse until you look at it.
+  if (on && !alertMsg) alertTimer = setTimeout(() => { alertMsg = 'Sun Blade (SoX) picked up by the pet'; syncOrb(); }, 6000);
+}
+$('#minimise').onclick = () => minimise(true);
+let od = null;
+orb.onpointerdown = e => { od = { x: e.clientX, y: e.clientY, ox: orb.offsetLeft, oy: orb.offsetTop, moved: false }; orb.setPointerCapture(e.pointerId); };
+orb.onpointermove = e => {
+  if (!od) return;
+  const dx = e.clientX - od.x, dy = e.clientY - od.y;
+  if (Math.abs(dx) + Math.abs(dy) > 4) od.moved = true;
+  if (od.moved) { placeOrb({ x: od.ox + dx, y: od.oy + dy }); syncOrb(); }
+};
+orb.onpointerup = () => {
+  const d = od; od = null; if (!d) return;
+  if (d.moved) { store.set('orbPos', { x: orb.offsetLeft, y: orb.offsetTop }); return; }
+  alertMsg = ''; minimise(false);
+};
+orb.onmouseenter = () => { if (alertMsg) setTimeout(() => { alertMsg = ''; syncOrb(); }, 2500); };
+addEventListener('keydown', e => {
+  if (e.key === 'F8') { e.preventDefault(); setState(!$('#bot').classList.contains('stopped')); }
+  if (e.key === 'F7' && e.shiftKey) { e.preventDefault(); hiddenAll = !hiddenAll; minimise(!!store.get('minimised')); }
+});
+addEventListener('resize', () => { if (!orb.hidden) placeOrb({ x: orb.offsetLeft, y: orb.offsetTop }); });
+if (store.get('minimised')) minimise(true);

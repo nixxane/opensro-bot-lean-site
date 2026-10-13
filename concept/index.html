@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>nixxane bot · layout concept</title><link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="style.css"></head>
 <body>
-<div class="note"><b>Layout concept for nixxane bot, not in the bot yet.</b> Everything here is a mock-up with made-up data, and nothing talks to the game. Pages marked <span class="tag">new</span> are features the bot doesn't have yet. Click through the pages, try the map (drag, zoom, click to move the centre or add waypoints) and the <b>Compact</b> button. Tell us what you think on <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a>.</div>
+<div class="note"><b>Layout concept for nixxane bot, not in the bot yet.</b> Everything here is a mock-up with made-up data, and nothing talks to the game. Pages marked <span class="tag">new</span> are features the bot doesn't have yet. Click through the pages, try the map (drag, zoom, click to move the centre or add waypoints) the <b>Compact</b> button, and the <b>X</b> at the top right, which shrinks the panel to a small icon you can drag anywhere (click it to bring the panel back). <b>F8</b> starts or stops; <b>Shift+F7</b> hides everything. Tell us what you think on <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a>.</div>
 <div class="bot" id="bot">
   <i class="frame lu"></i><i class="frame mu"></i><i class="frame ru"></i><i class="frame ls"></i><i class="frame rs"></i><i class="frame ld"></i><i class="frame md"></i><i class="frame rd"></i>
-  <header class="title"><b>nixxane bot</b><em>1.2.80</em><button class="sbtn" id="mode" title="Switch between wide and compact panel">Compact</button><button class="sbtn">Discord</button><button class="x" aria-label="Close"></button></header>
+  <header class="title"><b>nixxane bot</b><em>1.2.80</em><button class="sbtn" id="mode" title="Switch between wide and compact panel">Compact</button><button class="sbtn">Discord</button><button class="x" id="minimise" aria-label="Minimise" title="Minimise (the bot keeps running)"></button></header>
 
   <!-- Status strip: sBot-style header with live bars, always visible -->
   <section class="strip box">
@@ -209,5 +209,7 @@
     </ul>
   </section>
 </div>
+<p class="gone" id="gone" hidden>The panel is minimised. In the game, all of this space is yours again, and the bot keeps running. Click the icon to bring the panel back, or drag it out of the way.</p>
+<button class="orb" id="orb" hidden aria-label="Show the bot panel"><img src="a/icon_cha_auto_attack.png" alt=""><i class="dot"></i><span class="orbtip" id="orbtip"><b id="orbstate">Hunting</b><small id="orbreason">Attacking Tiger Girl · pet collecting</small><em>Click to open · drag to move</em></span></button>
 <script src="app.js"></script>
 </body></html>

@@ -128,3 +128,17 @@ input[type=range]{width:110px;accent-color:#c99a1e}output{width:26px;text-align:
 
 .note{max-width:1000px;width:100%;padding:10px 14px;background:#1d1a12;border:1px solid #6b5a36;color:var(--tx);line-height:1.5}.note b{color:#fff}.note a{color:#6fc1ff}
 @media(max-width:1040px){.bot{width:100%}}
+
+/* Minimised: a skill-slot sized icon with a status dot */
+.orb{position:fixed;z-index:50;width:40px;height:40px;min-width:0;padding:2px;border:1px solid #c9a85c;border-image:none;background:#000;box-shadow:0 0 0 1px #000,0 3px 10px #000c;cursor:grab;touch-action:none}
+.orb:hover{border-color:#ffe08a;border-image:none}.orb:active{cursor:grabbing;border-image:none}
+.orb img{width:34px;height:34px;display:block;pointer-events:none}
+.orb .dot{position:absolute;right:-4px;bottom:-4px;width:12px;height:12px;border:2px solid #000;box-sizing:content-box}
+.orb.stopped .dot{background:#d9583e;box-shadow:0 0 6px #d9583e;animation:none}
+.orb.trip .dot{background:#ffd65a;box-shadow:0 0 6px #ffd65a}
+.orb.alert{animation:ring 1s infinite}@keyframes ring{50%{box-shadow:0 0 0 1px #000,0 0 14px 4px #6fc1ff}}
+.orbtip{position:absolute;right:46px;top:50%;transform:translateY(-50%);display:none;width:max-content;max-width:240px;padding:6px 9px;text-align:left;background:#0b0a07f2;border:1px solid #6b5a36;white-space:normal;line-height:1.35}
+.orb.left .orbtip{right:auto;left:46px}
+.orb:hover .orbtip,.orb.alert .orbtip{display:grid}.orbtip b{color:#9fe27e}.orb.stopped .orbtip b{color:#f08c74}.orb.trip .orbtip b{color:#ffd65a}
+.orbtip small{color:var(--tx)}.orbtip em{font-style:normal;color:var(--dim);font-size:10px;margin-top:2px}.orb.alert .orbtip small{color:#6fc1ff}
+.gone{max-width:420px;margin:120px auto 0;text-align:center;color:var(--dim);font-size:13px;line-height:1.6}
