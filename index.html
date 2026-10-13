@@ -26,6 +26,12 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/bc7f2bc">1.2.80</a> · Stone fusion no longer stops at 30</h3>
+        <ul>
+          <li>The 30-fusion stop is now an optional setting, "Stop after this many fusions", under Magic stones for the weapon. 0 means no limit and is the default, so a run goes on until the weapon has the wanted counts, a stone runs out or the game refuses.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/6c57585659b26d7a0192845190f06e5a1a213d34">1.2.79</a> · Stone fusion works: it uses the request the server accepts</h3>
         <ul>
           <li>Fusing Luck, Steady and Immortal stones was refused by the game with code 16 every time. The bot used the page's attribute request, which the server answers with a refusal for these stones; it now uses the magic request, which is the one the server takes them in.</li>
@@ -40,7 +46,7 @@
           <li><strong>Fuse stones now</strong> only fuses them. <strong>Start alchemy</strong> fuses the missing stones first, then enhances with elixirs as before.</li>
           <li>Luck raises the enhancement success chance, Steady stops durability damage and Immortal stops destruction when an enhancement fails. The stones must be of the weapon's degree and in your bag.</li>
         </ul>
-        <p class="release-note">It stops if a stone is missing, the game refuses a fusion, or after 30 fusions. New in this version and checked against a simulated game: if a fusion does not raise the count, tell us on Discord.</p>
+        <p class="release-note">It stops if a stone is missing, the game refuses a fusion, or when it reaches your optional fusion limit. New in this version and checked against a simulated game: if a fusion does not raise the count, tell us on Discord.</p>
       </article>
       <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/f0a184058d6b82fa73f0d6905829037b6aeb2fff">1.2.77</a> · Arrows and bolts are bought on town trips</h3>
