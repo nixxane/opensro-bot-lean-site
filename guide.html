@@ -63,7 +63,7 @@
       <li>Stop the bot while you save points.</li>
     </ul>
     <h3>Set the town points automatically</h3>
-    <p>Open <strong>Supplies → Scroll town cycle</strong>. Use a return scroll, don't move, and click <strong>Auto-set town services</strong>. The bot recognises the town and fills the arrival point, warehouse, potion merchant, repair merchant and world statue. It only fills what is empty. <strong>Redo all automatically</strong> replaces everything.</p>
+    <p>Open the <strong>Town</strong> page and scroll to <strong>Scroll town cycle</strong>. Use a return scroll, don't move, and click <strong>Auto-set town services</strong>. The bot recognises the town and fills the arrival point, warehouse, potion merchant, repair merchant and world statue. It only fills what is empty. <strong>Redo all automatically</strong> replaces everything.</p>
     <p class="note">Press it where the return scroll puts you if you can. If the saved arrival point is not where the scroll lands, the bot corrects it by itself after the first recall: once your character stands still in the town for three seconds, that spot becomes the arrival point.</p>
     <h3>Or save the points by hand</h3>
     <ol>
@@ -71,13 +71,16 @@
       <li>Walk to the warehouse, stand a few steps in front of the NPC on open ground, <strong>select the NPC in the game</strong>, then click <strong>Save warehouse</strong>. Do the same for the <strong>repair merchant</strong> and the <strong>world statue / teleport</strong>.</li>
       <li>For the <strong>potion merchant</strong>, open its shop first, then click <strong>Save potion merchant</strong>.</li>
     </ol>
-    <img class="shot" src="guide/08-town-cycle.png" width="470" alt="Supplies, Scroll town cycle: the town switches, the Auto-set town services button and the five Save buttons, each showing Not saved.">
+    <img class="shot" src="guide/08-town-cycle.png" width="470" alt="Town page, Scroll town cycle: the town switches, the Auto-set town services button and the five Save buttons, each showing Not saved.">
     <p class="note">With manual saves the bot walks to the exact spot you stood on. If a merchant is too far from that spot, the trip stalls on the way there. Standing a few steps in front of the NPC, on open ground, avoids it.</p>
     <h3>Choose what to buy</h3>
     <p>In <strong>Potion restock</strong> tick <strong>Buy HP</strong> and <strong>Buy MP</strong> and set <strong>Low stock</strong> (a trip starts at or below it) and <strong>refill to</strong> (the total you want after shopping, counting what you carry). Town trips buy X-Large HP and MP potions. You can also buy vigor potions in the size you choose, and abnormal pills. Archers can tick <strong>Buy arrows</strong> or <strong>Buy bolts</strong> under <strong>Supplies → Arrows and bolts</strong>: they are bought at the repair merchant on the same trip, and equipping them is up to you.</p>
     <img class="shot" src="guide/07-restock.png" width="470" alt="Supplies, Potion restock: Buy HP and Buy MP with low-stock and refill amounts, the vigor potion size, and abnormal pills.">
     <h3>Turn it on</h3>
-    <p>Tick <strong>Use return scroll → town services → reverse return</strong>, save your hunting spot, and start the bot. Other options in that section: return when the pickup pet is nearly full, revive in town and reverse back after dying, and deposit gear in the warehouse (see below). F8 cancels a trip at any time.</p>
+    <p>Tick <strong>Use return scroll → town services → reverse return</strong>, save your hunting spot, and start the bot. The same section lets you deposit gear in the warehouse (see below); returning when the pickup pet is nearly full and reviving in town after dying are under <strong>Go to town when…</strong>. F8 cancels a trip at any time.</p>
+    <h3>What starts a trip</h3>
+    <p>The top of the <strong>Town</strong> page shows the trip as pictures: return scroll, warehouse, potions, repair and reverse, with what each step still needs. Under <strong>Go to town when…</strong> are the reasons a trip starts. A nearly full bag and low potions always count. You can also send the bot to town when the pickup pet is nearly full, when your <strong>weapon is broken</strong> (on by default), when your <strong>gear is worn</strong> below a percentage, after <strong>no XP for a while</strong>, or <strong>on a timer</strong>. The XP and timer clocks only run while hunting and restart with every trip.</p>
+    <img class="shot" src="guide/08-town-triggers.png" width="470" alt="Town page: the trip as five pictures, then Go to town when… with the pet, broken weapon, worn gear, no XP and timer switches.">
 
     <h2 id="pet">4. Pet loot</h2>
     <ol>

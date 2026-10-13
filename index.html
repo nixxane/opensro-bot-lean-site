@@ -26,6 +26,17 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/352001f">1.2.86</a> · Town page and new reasons to go to town</h3>
+        <ul>
+          <li>New Town page. It shows the trip as a row of pictures (return scroll, warehouse, potions, repair, reverse) with what each step still needs, and everything that starts a trip in one place. The scroll town cycle settings and Arrows and bolts moved here from Supplies.</li>
+          <li>Weapon is broken: a trip starts when your equipped weapon is at 0 durability, so it gets repaired instead of hitting with bare hands. On by default.</li>
+          <li>Gear is worn: a trip starts when the most worn piece you are wearing drops below a percentage of its own maximum durability (15% by default). Off by default.</li>
+          <li>No XP for a while: a trip starts after a number of minutes without experience (10 by default). Off by default.</li>
+          <li>On a timer: a trip every so many minutes (60 by default). Off by default.</li>
+        </ul>
+        <p class="release-note">All of them need the town cycle on. The XP and timer clocks run only while hunting and restart with every trip.</p>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/a68e8ba">1.2.85</a> · The map shows the ground again</h3>
         <ul>
           <li>The Map page showed only a black background in the game. The game now publishes its minimap tiles in a new compressed format inside a new kind of asset pack, which the bot could not read. It reads both now, so the minimap appears under the markers.</li>
