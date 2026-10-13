@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>nixxane bot · layout concept</title><link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="note"><b>Layout concept for nixxane bot, not in the bot yet.</b> Everything here is a mock-up with made-up data, and nothing talks to the game. Pages marked <span class="tag">new</span> are features the bot doesn't have yet. Click through the pages, try the map (drag, zoom, click to move the centre or add waypoints) and the <b>Compact</b> button. Tell us what you think on <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a>.</div>
+<div class="bot" id="bot">
+  <i class="frame lu"></i><i class="frame mu"></i><i class="frame ru"></i><i class="frame ls"></i><i class="frame rs"></i><i class="frame ld"></i><i class="frame md"></i><i class="frame rd"></i>
+  <header class="title"><b>nixxane bot</b><em>1.2.80</em><button class="sbtn" id="mode" title="Switch between wide and compact panel">Compact</button><button class="sbtn">Discord</button><button class="x" aria-label="Close"></button></header>
+
+  <!-- Status strip: sBot-style header with live bars, always visible -->
+  <section class="strip box">
+    <img class="portrait" src="a/cleric_heala_cycle_a.png" alt="">
+    <div class="who"><b>ExampleHero</b><span>Lv 82 · Cleric · Jangan outskirts</span></div>
+    <div class="bars">
+      <div class="gauge hp"><label>HP</label><div class="track"><i style="width:94%"></i></div><span>3,812 / 4,056</span></div>
+      <div class="gauge mp"><label>MP</label><div class="track"><i style="width:72%"></i></div><span>2,190 / 3,041</span></div>
+      <div class="gauge xp"><label>EXP</label><div class="track"><i style="width:41%"></i></div><span>41.32 %</span></div>
+    </div>
+    <div class="state"><i class="dot"></i><b id="state">Hunting</b><small id="reason">Attacking Tiger Girl · pet collecting</small></div>
+    <div class="go"><button class="primary" id="toggle">Start / stop <small>F8</small></button><div class="row2"><button>Return &amp; hunt</button><button>Stop all</button></div></div>
+  </section>
+
+  <div class="main">
+    <!-- Left rail: sBot / phBot vertical page list, icons from the game's own action bar -->
+    <nav class="rail" id="rail" role="tablist">
+      <button role="tab" data-p="map" aria-selected="true"><img src="a/mm_sign_character.png" class="sm" alt="">Map</button>
+      <button role="tab" data-p="combat"><img src="a/icon_cha_auto_attack.png" alt="">Combat</button>
+      <button role="tab" data-p="party"><img src="a/icon_cha_party.png" alt="">Party<span class="new">new</span></button>
+      <button role="tab" data-p="loot"><img src="a/icon_cha_autoget.png" alt="">Loot</button>
+      <button role="tab" data-p="supplies"><img src="a/icon_cha_recovery.png" alt="">Supplies</button>
+      <button role="tab" data-p="town"><img src="a/mall_return_scroll.png" alt="">Town</button>
+      <button role="tab" data-p="alchemy"><img src="a/icon_cha_alchemy.png" alt="">Alchemy</button>
+      <button role="tab" data-p="wardrobe"><img src="a/icon_cha_shop.png" alt="">Wardrobe</button>
+      <button role="tab" data-p="alerts"><img src="a/letteralarm_1.png" alt="">Alerts<span class="new">new</span></button>
+      <button role="tab" data-p="settings"><img src="a/icon_cha_helper.png" alt="">Settings</button>
+    </nav>
+
+    <div class="pane">
+      <!-- MAP: phBot-style map from the real minimap tiles -->
+      <div class="pg" data-p="map">
+        <div class="mapwrap">
+          <div class="map" id="map"><div class="tiles" id="tiles"></div><svg id="ov"></svg></div>
+          <div class="mapctl"><button class="zb" id="zin" aria-label="Zoom in"><img src="a/mm_zoomin.png" alt=""></button><button class="zb" id="zout" aria-label="Zoom out"><img src="a/mm_zoomout.png" alt=""></button></div>
+          <div class="coords" id="coords">X 6472 · Y 834 · region 170×98</div>
+        </div>
+        <div class="cols">
+          <fieldset><legend>Hunting area</legend>
+            <div class="seg" id="tool"><button class="sel" data-t="center">Move centre</button><button data-t="path">Add waypoint</button><button data-t="avoid">Avoid zone</button></div>
+            <div class="field"><span>Hunt radius (m)</span><input type="range" id="rad" min="10" max="100" value="40"><output id="radv">40</output></div>
+            <div class="field"><span>Chase distance (m)</span><input type="range" id="chase" min="20" max="150" value="70"><output id="chasev">70</output></div>
+            <div class="field"><span>Walk the waypoints when nothing is in range</span><input type="checkbox" checked></div>
+          </fieldset>
+          <fieldset><legend>Saved areas</legend>
+            <ul class="areas" id="areas">
+              <li class="sel"><img src="a/wmap_sign_huntingpoint.png" alt=""><span><b>Tiger Girls</b><small>Lv 80-84 · 3 waypoints</small></span><em>active</em></li>
+              <li><img src="a/wmap_sign_huntingpoint.png" alt=""><span><b>Jangan cave 1F</b><small>Lv 84-86 · radius 30 m</small></span></li>
+              <li><img src="a/wmap_sign_huntingpoint.png" alt=""><span><b>Quest: Ghost Swords</b><small>until 30 kills</small></span></li>
+            </ul>
+            <div class="row2"><button>Save current</button><button>Use selected</button></div>
+          </fieldset>
+        </div>
+        <p class="legend"><span><img src="a/mm_sign_character.png" alt="">you</span><span><img src="a/mm_sign_party.png" alt="">party</span><span><img src="a/mm_sign_monster.png" alt="">monster</span><span><img src="a/mm_sign_unique.png" alt="">unique</span><span><img src="a/mm_sign_otherplayer.png" alt="">other player</span><span><i class="sw ring"></i>hunt radius</span><span><i class="sw dash"></i>chase</span><span><i class="sw path"></i>waypoints</span><span><i class="sw avoid"></i>avoid</span></p>
+      </div>
+
+      <!-- COMBAT: two columns, dense rows like mBot, but skill icons instead of dropdowns -->
+      <div class="pg" data-p="combat" hidden>
+        <div class="classes" id="classes">
+          <button class="sel"><img src="skin/tw_normal.png" alt="">Normal <i>3</i></button><button><img src="skin/tw_champion.png" alt="">Champion <i>3</i></button><button><img src="skin/tw_giant.png" alt="">Giant <i>4</i></button><button><img src="skin/tw_party.png" alt="">Party <i>–</i></button><button><img src="skin/tw_elite.png" alt="">Elite <i>–</i></button><button><img src="skin/tw_unique.png" alt="">Unique <i>–</i></button>
+        </div>
+        <fieldset><legend>Normal rotation <small>drag to reorder · click to remove</small></legend>
+          <div class="slots"><img src="a/cleric_battlea_cross_a.png" onerror="this.src='a/cold_gigongta_a.png'" alt=""><img src="a/fire_gigongta_a.png" alt=""><img src="a/lightning_gigongta_a.png" alt=""><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span></div>
+        </fieldset>
+        <div class="cols">
+          <fieldset><legend>Buffs &amp; imbue</legend>
+            <div class="slots sm"><img src="a/cleric_blessa_str_a.png" alt=""><img src="a/cleric_blessa_physical_a.png" alt=""><img src="a/bard_speedupa_mspeed_a.png" alt=""><span class="empty"></span></div>
+            <div class="field"><span>Imbue</span><img class="ico16" src="a/lightning_chundung_a.png" alt=""><select><option>Lightning Force</option></select></div>
+            <div class="field"><span>Rebuff all when one runs out</span><input type="checkbox"></div>
+          </fieldset>
+          <fieldset><legend>Targets</legend>
+            <div class="field"><span>Berserk on</span><span class="mini-ic"><img src="skin/tw_giant.png" class="on" alt="Giant"><img src="a/tw_icon_titan.png" alt="Titan"><img src="skin/tw_unique.png" alt="Unique"></span></div>
+            <div class="field"><span>Monster level</span><input type="number" value="78">–<input type="number" value="86"></div>
+            <div class="field"><span>Avoid other players' targets</span><input type="checkbox" checked></div>
+          </fieldset>
+        </div>
+        <fieldset><legend>Monster priority <span class="tag">new</span></legend>
+          <table class="grid"><thead><tr><th></th><th>Monster</th><th>Prefer</th><th>Normal</th><th>Avoid</th><th>Ignore</th></tr></thead>
+          <tbody>
+            <tr><td><img src="skin/tw_giant.png" alt=""></td><td>Tiger Girl (giant)</td><td><input type="radio" name="p1" checked></td><td><input type="radio" name="p1"></td><td><input type="radio" name="p1"></td><td><input type="radio" name="p1"></td></tr>
+            <tr><td><img src="skin/tw_normal.png" alt=""></td><td>Tiger Girl</td><td><input type="radio" name="p2"></td><td><input type="radio" name="p2" checked></td><td><input type="radio" name="p2"></td><td><input type="radio" name="p2"></td></tr>
+            <tr><td><img src="skin/tw_champion.png" alt=""></td><td>Ghost Sword</td><td><input type="radio" name="p3"></td><td><input type="radio" name="p3"></td><td><input type="radio" name="p3" checked></td><td><input type="radio" name="p3"></td></tr>
+          </tbody></table>
+        </fieldset>
+      </div>
+
+      <!-- PARTY: buff & heal party members — the biggest feature gap -->
+      <div class="pg" data-p="party" hidden>
+        <fieldset><legend>Party members <small>drag a buff onto a member · uses the game's party window art</small></legend>
+          <ul class="members">
+            <li><img class="face" src="a/bard_dancea_warrior_a.png" alt=""><div class="nm"><b><img src="a/com_pt_leader.png" alt="leader"> Wyvernn</b><small>Lv 84 · Warrior · 12 m</small><div class="pb hp"><i style="width:88%"></i></div><div class="pb mp"><i style="width:60%"></i></div></div>
+              <div class="bf"><img src="a/cleric_blessa_str_a.png" alt=""><img src="a/cleric_blessa_physical_a.png" alt=""><img src="a/bard_dancea_warrior_a.png" alt=""><span class="add">+</span></div><label class="hl">heal &lt; <input type="number" value="70">%</label></li>
+            <li><img class="face" src="a/fire_gigongta_a.png" alt=""><div class="nm"><b>Nyx</b><small>Lv 82 · Wizard · 20 m</small><div class="pb hp low"><i style="width:34%"></i></div><div class="pb mp"><i style="width:81%"></i></div></div>
+              <div class="bf"><img src="a/cleric_blessa_int_a.png" alt=""><img src="a/bard_recovera_mpheal_a.png" alt=""><span class="add">+</span></div><label class="hl">heal &lt; <input type="number" value="60">%</label><span class="act">healing…</span></li>
+            <li class="dead"><img class="face" src="a/cold_bingpan_a.png" alt=""><div class="nm"><b>Dagger</b><small>Lv 83 · Rogue · dead · 31 m</small><div class="pb hp"><i style="width:0"></i></div><div class="pb mp"><i style="width:0"></i></div></div>
+              <div class="bf"><img src="a/cleric_blessa_physical_a.png" alt=""><span class="add">+</span></div><label class="hl">heal &lt; <input type="number" value="60">%</label><span class="act res">resurrect queued</span></li>
+          </ul>
+        </fieldset>
+        <div class="cols">
+          <fieldset><legend>Support skills</legend>
+            <div class="field"><span>Heal</span><img class="ico16" src="a/cleric_heala_cycle_a.png" alt=""><select><option>Healing Cycle</option></select></div>
+            <div class="field"><span>Group heal when 2+ below</span><img class="ico16" src="a/cleric_heala_divide_a.png" alt=""><input type="number" value="60">%</div>
+            <div class="field"><span>Resurrect</span><img class="ico16" src="a/cleric_rebirtha_target_a.png" alt=""><select><option>Resurrection</option></select></div>
+            <div class="field"><span>Buff / heal range (m)</span><input type="number" value="30"></div>
+          </fieldset>
+          <fieldset><legend>Party rules</legend>
+            <div class="field"><span>Accept invites from list</span><input type="checkbox" checked></div>
+            <input class="wide" value="Wyvernn, Nyx, Dagger" aria-label="Names">
+            <div class="field"><span>Follow leader (stay within 10 m)</span><input type="checkbox"></div>
+            <div class="field"><span>Accept resurrection from party</span><input type="checkbox" checked></div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- LOOT: phBot pick-filter table, but rows per category + item icons -->
+      <div class="pg" data-p="loot" hidden>
+        <div class="seg"><button class="sel">Elixirs only</button><button>Elixirs + gold</button><button>All items</button><button>Custom</button></div>
+        <fieldset><legend>What to do with each kind</legend>
+          <table class="grid loot"><thead><tr><th></th><th>Kind</th><th>Pick</th><th>Store</th><th>Sell</th><th>Keep</th></tr></thead>
+          <tbody>
+            <tr><td><img src="a/mini_gold_icon.png" alt=""></td><td>Gold</td><td><input type="checkbox" checked></td><td>–</td><td>–</td><td>–</td></tr>
+            <tr><td><img src="a/all_potion_01.png" alt=""></td><td>Potions &amp; pills</td><td><input type="checkbox" checked></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox" checked></td></tr>
+            <tr><td><img src="a/ect_plate_gold.png" alt=""></td><td>SoX equipment <span class="tag gold">alert</span></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td>–</td><td><input type="checkbox"></td></tr>
+            <tr><td><img src="a/etc_box_red.png" alt=""></td><td>Other equipment</td><td><input type="checkbox" checked></td><td><input type="checkbox"></td><td><input type="checkbox" checked></td><td><input type="checkbox"></td></tr>
+            <tr><td><img src="a/all_spotion_01.png" alt=""></td><td>Elixirs</td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td>–</td><td><input type="checkbox"></td></tr>
+            <tr><td><img src="a/etc_scroll_red.png" alt=""></td><td>Magic &amp; attribute stones</td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td>–</td><td><input type="checkbox"></td></tr>
+          </tbody></table>
+        </fieldset>
+        <div class="cols">
+          <fieldset><legend>Collector</legend><div class="field"><span>Who picks up</span><select><option>Pickup pet</option><option>Character</option></select></div><div class="field"><span>Pickup radius (m)</span><input type="number" value="30"></div></fieldset>
+          <fieldset><legend>Names</legend><input class="wide" placeholder="Always include names"><input class="wide" placeholder="Exclude names"></fieldset>
+        </div>
+      </div>
+
+      <!-- TOWN: mBot "back town when" checklist + the trip as a visual flow -->
+      <div class="pg" data-p="town" hidden>
+        <fieldset><legend>The town trip</legend>
+          <ol class="flow"><li><img src="a/mall_return_scroll.png" alt=""><b>Return scroll</b><small>Jangan</small></li><li><img src="a/etc_box_red.png" alt=""><b>Warehouse</b><small>stones · SoX</small></li><li><img src="a/all_potion_03.png" alt=""><b>Potions</b><small>100 HP · 300 MP</small></li><li><img src="a/cold_shield_a.png" alt=""><b>Repair</b><small>sell pet loot</small></li><li><img src="a/mall_reverse_return_scroll.png" alt=""><b>Reverse</b><small>last point</small></li></ol>
+        </fieldset>
+        <fieldset><legend>Go to town when…</legend>
+          <div class="checks">
+            <label><input type="checkbox" checked><span>HP potions below</span><input type="number" value="20"></label>
+            <label><input type="checkbox" checked><span>MP potions below</span><input type="number" value="20"></label>
+            <label><input type="checkbox" checked><span>Pet bag has free slots ≤</span><input type="number" value="1"></label>
+            <label><input type="checkbox"><span>Arrows / bolts below</span><input type="number" value="200"></label>
+            <label class="nw"><input type="checkbox" checked><span>Gear durability below %</span><input type="number" value="15"><img src="a/icon_item_warning.png" alt=""></label>
+            <label class="nw"><input type="checkbox" checked><span>Weapon broken</span><img src="a/icon_item_broken.png" alt=""></label>
+            <label class="nw"><input type="checkbox"><span>No XP for (minutes)</span><input type="number" value="10"></label>
+            <label class="nw"><input type="checkbox"><span>Every (minutes)</span><input type="number" value="90"></label>
+            <label><input type="checkbox" checked><span>Died (revive in town)</span></label>
+          </div>
+          <p class="hint"><span class="tag">new</span> marks triggers the bot doesn't have yet.</p>
+        </fieldset>
+      </div>
+
+      <div class="pg" data-p="alerts" hidden>
+        <fieldset><legend>Notify me <small>chime here, and optionally Discord</small></legend>
+          <table class="grid"><thead><tr><th>Event</th><th>Chime</th><th>Discord</th></tr></thead><tbody>
+            <tr><td>SoX item picked up</td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td></tr>
+            <tr><td>Character died</td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td></tr>
+            <tr><td>Bot stopped (stuck, no supplies)</td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td></tr>
+            <tr><td>GM or player nearby</td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr><td>Whisper received</td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            <tr><td>Pet bag full</td><td><input type="checkbox" checked></td><td><input type="checkbox"></td></tr>
+          </tbody></table>
+          <input class="wide" placeholder="Discord webhook URL (optional)">
+        </fieldset>
+      </div>
+
+      <div class="pg same" data-p="supplies" hidden><p>Supplies keeps today's content, laid out in two columns.</p></div>
+      <div class="pg same" data-p="alchemy" hidden><p>Alchemy keeps today's content, laid out in two columns.</p></div>
+      <div class="pg same" data-p="wardrobe" hidden><p>Wardrobe keeps today's content, laid out in two columns.</p></div>
+      <div class="pg same" data-p="settings" hidden><p>Settings keeps today's content (mastery, anti-stuck, reports, import/export).</p></div>
+    </div>
+
+    <!-- Right sidebar: mBot / sBot always-visible session numbers -->
+    <aside class="side">
+      <fieldset><legend>Session</legend>
+        <dl class="stats"><dt>Time</dt><dd id="clock">01:24:08</dd><dt>Kills</dt><dd>1,284</dd><dt>EXP / h</dt><dd>248,600</dd><dt>SP / h</dt><dd>1,920</dd><dt>Gold / h</dt><dd class="gold">58,900</dd><dt>Deaths</dt><dd>0</dd><dt>SoX</dt><dd class="sox">1</dd><dt>Town trips</dt><dd>2</dd></dl>
+        <button class="full">Reset</button>
+      </fieldset>
+      <fieldset><legend>Supplies</legend>
+        <div class="sup"><img src="a/all_potion_03.png" alt=""><span>HP</span><b>146</b></div>
+        <div class="sup"><img src="a/all_potion_04.png" alt=""><span>MP</span><b>402</b></div>
+        <div class="sup"><img src="a/mall_return_scroll.png" alt=""><span>Return</span><b>7</b></div>
+        <div class="meter"><span>Bag</span><div class="mini"><i style="width:41%"></i></div><small>23/56</small></div>
+        <div class="meter"><span>Pet</span><div class="mini warn"><i style="width:86%"></i></div><small>48/56</small></div>
+        <div class="meter"><span>Gear</span><div class="mini"><i style="width:63%"></i></div><small>63 %</small></div>
+      </fieldset>
+    </aside>
+  </div>
+
+  <!-- Bottom log, like all three bots -->
+  <section class="logbox box">
+    <div class="loghead"><b>Activity</b><span class="seg sm" id="lf"><button class="sel">All</button><button>Combat</button><button>Loot</button><button>Town</button><button>Party</button></span></div>
+    <ul class="log" id="log">
+      <li><time>12:41:07</time><span class="loot">Pet picked up <b class="rare">Elixir (Weapon) 9</b></span></li>
+      <li><time>12:40:58</time><span class="party">Healed <b>Nyx</b> (34 % → 81 %)</span></li>
+      <li><time>12:40:52</time><span>Killed <b>Tiger Girl</b> · +3,120 EXP</span></li>
+      <li><time>12:40:31</time><span>Used <b>HP Recovery Potion (L)</b></span></li>
+      <li><time>12:39:58</time><span class="town">Supplies fine · next check in 30 s</span></li>
+    </ul>
+  </section>
+</div>
+<script src="app.js"></script>
+</body></html>
