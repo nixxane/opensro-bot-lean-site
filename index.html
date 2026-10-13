@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/6c57585659b26d7a0192845190f06e5a1a213d34">1.2.79</a> · Stone fusion works: it uses the request the server accepts</h3>
+        <ul>
+          <li>Fusing Luck, Steady and Immortal stones was refused by the game with code 16 every time. The bot used the page's attribute request, which the server answers with a refusal for these stones; it now uses the magic request, which is the one the server takes them in.</li>
+          <li>A fusion can fail on this server: the stone is used up and nothing changes. That is now counted and the run carries on instead of stopping.</li>
+          <li>A refusal now says why, for example that the stone is not of the weapon's degree, or that the weapon is at 6 of that stone or has no free magic option slot.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/300d534ff4d4987a042d6c4baaf5506614bc4059">1.2.78</a> · The Alchemy tab fuses Luck, Steady and Immortal stones</h3>
         <ul>
           <li>New <strong>Magic stones for the weapon</strong> section in Alchemy: choose how many Luck, Steady and Immortal stones the weapon should have (up to 6 each; 0 leaves one off).</li>
