@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/08f07c2a1d54b60ce5f450e3a2b01c01bf00eeda">1.2.91</a> · Walks around trees and walls while chasing</h3>
+        <ul>
+          <li>A character that stood still against a tree or wall while chasing a mob used to stay there until the no-damage timeout dropped the mob. After 2.5 seconds without moving or hurting its target, the bot now checks the game's collision data and, if the straight line is blocked, walks around the obstacle, then attacks as normal.</li>
+          <li>After three detours on the same mob it drops that mob for a minute and picks another.</li>
+          <li>Settings → Obstacles switches it off or changes the wait. It needs the game's collision data and works outdoors only. Built from a simulated game with a wall; not yet seen on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/20b87fc8b2f3c963f2921014aacc16ca7232658f">1.2.90</a> · The bot is now MIT licensed</h3>
         <ul>
           <li>Added an MIT licence under nixxane, so anyone can use, change and build on the bot, including inside other projects. The script header now says so.</li>
