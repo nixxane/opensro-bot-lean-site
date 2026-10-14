@@ -26,6 +26,15 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d0b7dfa28df076bf92b9b8ccb01085b6e4ac6e22">1.2.95</a> · Notices a character that cannot move</h3>
+        <ul>
+          <li>A character that should be walking (chasing, returning or picking up) but has not moved at all for 20 seconds, with nothing being damaged, is now treated as stuck, for example inside a tree. It first steps back to where it just was, then walks to the nearest open ground.</li>
+          <li>If both fail, hunting stops with an alert chime and a clear message, instead of the character standing there for minutes. It does not use a return scroll on its own.</li>
+          <li>When it happens the Activity log says whether the collision data thinks the character's tile is blocked, and the bug report shows the same, to help find why characters get stuck in trees.</li>
+          <li>Settings → Obstacles switches it off or changes the 20 seconds. Tested on the simulated game only; not yet seen on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/988853645d4c1fa35150a942dde566ffd972938f">1.2.94</a> · Says why it went to town</h3>
         <ul>
           <li>Every town trip now writes its reason to the Activity log, for example Town trip started: potions running low, and the town status line shows it during the trip. Reasons are bag nearly full, pet nearly full, potions or ammunition low, weapon broken, gear worn, no XP for a while, every set number of minutes, returning after a death, or started by you.</li>
