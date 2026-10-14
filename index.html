@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/997e4c2cd8804c766d7602abb5acdf59cdffae5f">1.2.92</a> · The pet and the character can each pick up their own items</h3>
+        <ul>
+          <li>Loot has a new section, Who picks up what: every kind of drop is set to Leave on the ground, Pickup pet or Character. The pet can collect elixirs and equipment while the character takes the potions and pills it wants on itself.</li>
+          <li>The status line for a pet that is not picking up now names the item kinds that are switched off, for example 52 not wanted (30 equipment, 22 other items), instead of a general list of possible reasons.</li>
+          <li>The old Collector setting is now Default collector and still decides for anything you do not set yourself.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/08f07c2a1d54b60ce5f450e3a2b01c01bf00eeda">1.2.91</a> · Walks around trees and walls while chasing</h3>
         <ul>
           <li>A character that stood still against a tree or wall while chasing a mob used to stay there until the no-damage timeout dropped the mob. After 2.5 seconds without moving or hurting its target, the bot now checks the game's collision data and, if the straight line is blocked, walks around the obstacle, then attacks as normal.</li>

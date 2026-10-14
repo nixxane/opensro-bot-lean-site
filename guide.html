@@ -48,7 +48,7 @@
     <img class="shot" src="guide/06-potions.png" width="470" alt="Supplies, Automatic potion use: potion switches and thresholds, vigor thresholds, cure pills, pet recovery kits, then the Potion restock section.">
 
     <h3>Step 5: loot</h3>
-    <p>Open the <strong>Loot</strong> tab. Choose what to collect and who collects it: your character, or a pickup pet (see <a href="#pet">Pet loot</a>). The three buttons (Elixirs only, Elixirs + gold, All items) are quick presets. <strong>Always include names</strong> and <strong>Exclude names</strong> take comma-separated words.</p>
+    <p>Open the <strong>Loot</strong> tab. Under <strong>Who picks up what</strong>, set every kind of drop to <strong>Leave on the ground</strong>, <strong>Pickup pet</strong> or <strong>Character</strong>, so the pet and the character can work side by side (see <a href="#pet">Pet loot</a>). The three buttons (Elixirs only, Elixirs + gold, All items) are quick presets. <strong>Always include names</strong> and <strong>Exclude names</strong> take comma-separated words.</p>
     <img class="shot" src="guide/05-loot.png" width="470" alt="The Loot tab: collector, chime settings, preset buttons, item category checkboxes and name filters.">
 
     <h3>Step 6: start</h3>
@@ -85,7 +85,7 @@
     <h2 id="pet">4. Pet loot</h2>
     <ol>
       <li>Summon your pickup pet in the game.</li>
-      <li>In <strong>Loot</strong>, set <strong>Collector</strong> to <strong>Pickup pet</strong>, and choose what to collect.</li>
+      <li>In <strong>Loot</strong>, set <strong>Default collector</strong> to <strong>Pickup pet</strong>, and under <strong>Who picks up what</strong> choose what the pet collects and what the character takes.</li>
       <li>Turn the <strong>pet bag full chime</strong> on if you want to hear when its bag fills (use <strong>Test pet chime</strong> once so your browser allows sound).</li>
     </ol>
     <p>The pet collects while you fight. The status line shows what it is doing.</p>
@@ -126,7 +126,7 @@
         <tr><td>No walkable route found</td><td>Save that service point again from open ground a few steps in front of the NPC.</td></tr>
         <tr><td>Blocked route (no progress for 20 s)</td><td>Something is in the way. Check the character is not stuck behind another player or object.</td></tr>
         <tr><td>Hunting: searching for an eligible target. Monsters in view: 5. Skipped: …</td><td>The bot sees monsters but may not attack them. The line says why: the monster type is switched off, the level is outside your limits, a name filter, too far (raise Hunt radius or Chase distance), or another player is fighting it. "No monsters in view" means you are in the wrong place: stand where monsters are and press Set hunting spot here.</td></tr>
-        <tr><td>Pet ready; waiting for eligible drops. Drops in view: 4, ready to collect: 1. Not collected: …</td><td>The pet is fine but some drops are skipped. The line says why: the item type is switched off in Loot, too far from you (raise Pickup radius), outside the hunting area, owned by another player, or the pet bag is full. "Finish current fight" does not affect the pet.</td></tr>
+        <tr><td>Pet ready; waiting for eligible drops. Drops in view: 4, ready to collect: 1. Not collected: …</td><td>The pet is fine but some drops are skipped. The line says why, and names the item kinds that are switched off, for example "not wanted by your Loot settings (30 equipment, 22 other items)": the item type is switched off in Loot, too far from you (raise Pickup radius), outside the hunting area, owned by another player, or the pet bag is full. "Finish current fight" does not affect the pet.</td></tr>
         <tr><td>Combat: normal attack (1 cooling down, not enough MP, …)</td><td>The reason a rotation skill was not used. "Paused after a server rejection" clears by itself within seconds.</td></tr>
         <tr><td>Party join blocked: not the leader / party full / request expired</td><td>Auto-accept only works while you lead the party or are solo, the party has room, and the application is still open.</td></tr>
         <tr><td>The login is gone</td><td>The server restarted and the saved login expired. Log in and enter your character; the bot resumes.</td></tr>
