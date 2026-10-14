@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d176f579ec6a7fe79d6d8a56fc1583c41d5ea248">1.2.96</a> · Waits for a party resurrection before reviving itself</h3>
+        <ul>
+          <li>Fixed: with Accept resurrection from party members on, the bot was meant to wait 20 seconds before reviving itself when a party member is around, but the check for a living helper was the wrong way round, so it only waited when the helper was dead. It now waits the 20 seconds whenever a living party member is in view.</li>
+          <li>A helper seen in the last 15 seconds still counts, so a moment out of view does not cut the wait short.</li>
+          <li>The Activity log now says what it is doing when the character dies, for example Died: waiting 20 s for a party member to resurrect before reviving.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d0b7dfa28df076bf92b9b8ccb01085b6e4ac6e22">1.2.95</a> · Notices a character that cannot move</h3>
         <ul>
           <li>A character that should be walking (chasing, returning or picking up) but has not moved at all for 20 seconds, with nothing being damaged, is now treated as stuck, for example inside a tree. It first steps back to where it just was, then walks to the nearest open ground.</li>
