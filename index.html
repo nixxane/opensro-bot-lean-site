@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/a97b0f86c37ccf7d70f36f3e2e168b146e02c9bf">1.2.98</a> · Auto skill upgrades can cover every learned skill</h3>
+        <ul>
+          <li>New dropdown Skills to upgrade under Settings → Auto mastery and skills: Only skills in my rotations, buffs and imbue (the default, as before) or All skills I have learned. With All, the skills you use are raised first and then every other skill line you already have.</li>
+          <li>It still only raises the next level of skills you have already learned, within the game's own rules (mastery level, strength, intelligence, prerequisites, skill points and your reserve). It never learns brand-new skills.</li>
+          <li>The status line lists at most the first eight reasons, so a long skill list does not flood it.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/ba183d7ec51082cdd3012bf2959d5e8fc6e0779f">1.2.97</a> · Auto skill upgrades say what they see</h3>
         <ul>
           <li>The auto mastery and skills status now names each skill it is not raising and why: not learned yet, already at its highest level, mastery or strength too low, a prerequisite missing, or not enough skill points. It also says when your rotations, buffs and imbue hold no skills yet, and when the skills switch is off.</li>
