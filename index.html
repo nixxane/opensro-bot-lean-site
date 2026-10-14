@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/ba183d7ec51082cdd3012bf2959d5e8fc6e0779f">1.2.97</a> · Auto skill upgrades say what they see</h3>
+        <ul>
+          <li>The auto mastery and skills status now names each skill it is not raising and why: not learned yet, already at its highest level, mastery or strength too low, a prerequisite missing, or not enough skill points. It also says when your rotations, buffs and imbue hold no skills yet, and when the skills switch is off.</li>
+          <li>The skill upgrades only cover skills you already learned that are in your attack rotations, buffs or imbue on the Combat tab. The dropdown that was called Spend skill points on is now Order when both are ticked, because it does nothing unless both switches are on.</li>
+          <li>The bug report now includes this status line.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d176f579ec6a7fe79d6d8a56fc1583c41d5ea248">1.2.96</a> · Waits for a party resurrection before reviving itself</h3>
         <ul>
           <li>Fixed: with Accept resurrection from party members on, the bot was meant to wait 20 seconds before reviving itself when a party member is around, but the check for a living helper was the wrong way round, so it only waited when the helper was dead. It now waits the 20 seconds whenever a living party member is in view.</li>
