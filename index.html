@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5642c9b660eff312247958984ee8d2877943035a">1.2.100</a> · Alchemy helper stones: a simple Use switch for each</h3>
+        <ul>
+          <li>Luck, Steady, Immortal and Astral now each have a Use switch. When it is ticked, the bot fuses a stone automatically before every attempt at or above the plus you set whenever the item has fewer charges than you asked it to keep, so the stones are used while enhancing without any extra clicking.</li>
+          <li>Before, a helper only ran when its count was set above zero and the counts started at zero, which made it look as if the stones were never used. The counts now start at 1 and mean how many charges to keep, and old settings keep their helpers switched on.</li>
+          <li>The Alchemy tab says which helpers it will use, from which plus and how many charges it keeps, or says that none are ticked.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/e218dd77c0d58cdb6ecd4cb1f6f3db51c2b3ea91">1.2.99</a> · Alchemy tab: every gear kind, rules from +N, odds and a results log</h3>
         <ul>
           <li>The Alchemy tab now enhances weapons, shields, armour and accessories, each with its own elixir (the A and B elixirs of its kind). Before, only weapons worked.</li>
