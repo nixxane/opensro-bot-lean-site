@@ -26,6 +26,27 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/c1a9144">1.2.104</a> · Stuck-character recall fix</h3>
+        <ul>
+          <li>If the optional recovery recall could not start a town trip, hunting kept running and the stuck check repeated forever. Hunting now stops with the alert, like when recall is off.</li>
+          <li>Reviewed the 1.2.101 to 1.2.103 obstacle and attack-retry changes (tests, browser test and native navigation comparison all pass).</li>
+        </ul>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2a9106f">1.2.103</a> · Fix attack retries and cross-target skill pauses</h3>
+        <ul>
+          <li>Fixed skills being falsely paused while the character was still approaching a monster outside skill reach.</li>
+          <li>Attack rejection pauses now apply to the affected monster, so a failed target does not leave skills paused against the next one.</li>
+        </ul>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/c1a9144">1.2.102</a> · Safer obstacle pursuit and escape recovery</h3>
+        <ul>
+          <li>Blocked enemies are checked before repeated attack approaches; unreachable targets are released and dropped, and detours use collision-checked short steps.</li>
+          <li>Escape needs fresh, stable arrival plus a second move before hunting resumes. Settings adds an optional recovery recall and local escape diagnostics, both off by default.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5642c9b660eff312247958984ee8d2877943035a">1.2.100</a> · Alchemy helper stones: a simple Use switch for each</h3>
         <ul>
           <li>Luck, Steady, Immortal and Astral now each have a Use switch. When it is ticked, the bot fuses a stone automatically before every attempt at or above the plus you set whenever the item has fewer charges than you asked it to keep, so the stones are used while enhancing without any extra clicking.</li>
