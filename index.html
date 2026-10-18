@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/cb9a7ac">1.2.106</a> · Town setup: pick your town, no need to stand in it</h3>
+        <ul>
+          <li>The Town page has a Town list and a Set up this town button. Pick Hotan, Jangan, Donwhang, Constantinople or Samarkand and one click fills the arrival point, warehouse, potion merchant, repair merchant and world statue. You no longer have to use a return scroll and stand where it lands first.</li>
+          <li>The arrival point is now a preset too. Each town's return scroll always lands on the same spot, so the bot knows it from the server's own data instead of using wherever you happened to be standing.</li>
+          <li>Auto-set town services and Redo all automatically still work for the town you are in, and now also use the preset arrival point.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2bfb1e0">1.2.105</a> · Alchemy: aim for stat percentages with attribute stones</h3>
         <ul>
           <li>New Item attributes group in the Alchemy tab. Pick an item, choose the lowest percentage you want for each of its stats (Phy. reinforce, Mag. reinforce, attack rating, attack power, critical, defense, block, absorption and so on, depending on the kind of item) and press Fuse attribute stones. The bot fuses attribute stones of the item's degree until every picked stat reaches its target.</li>
