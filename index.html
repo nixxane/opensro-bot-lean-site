@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2bfb1e0">1.2.105</a> · Alchemy: aim for stat percentages with attribute stones</h3>
+        <ul>
+          <li>New Item attributes group in the Alchemy tab. Pick an item, choose the lowest percentage you want for each of its stats (Phy. reinforce, Mag. reinforce, attack rating, attack power, critical, defense, block, absorption and so on, depending on the kind of item) and press Fuse attribute stones. The bot fuses attribute stones of the item's degree until every picked stat reaches its target.</li>
+          <li>Every successful fusion rolls the stat again, so it can come out lower, and it can re-roll another stat of the item; the bot keeps going until all picked stats are at or above their targets, and the log names any other stat that changed.</li>
+          <li>The tab shows each stat's current percentage and a rough number of stones each target takes (the chance is 50% per stone before bonuses and the top steps get rare fast), and a stone limit (100 by default) stops it. It stops with a message if a stone of the right kind is missing from the bag.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/c1a9144">1.2.104</a> · Stuck-character recall fix</h3>
         <ul>
           <li>If the optional recovery recall could not start a town trip, hunting kept running and the stuck check repeated forever. Hunting now stops with the alert, like when recall is off.</li>
