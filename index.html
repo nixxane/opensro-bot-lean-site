@@ -26,6 +26,16 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/91442f3">1.2.110</a> · Share and import settings</h3>
+        <ul>
+          <li>New Share and import settings group in Settings. Copy share code or Save share file gives a short code or a file with only the settings you changed from the defaults, ready to post in Discord.</li>
+          <li>A share never contains your hunting spot, town and merchant points, walking routes, buff weapon sets or wardrobe, so it is safe to hand out and works on any character.</li>
+          <li>To import, paste a code or open a file and press Preview import. It lists exactly which settings would change, and only Apply import changes anything. Your own positions, town points, buff weapon sets and wardrobe are kept, and Undo last import brings your previous settings back.</li>
+          <li>Imports are read as plain data: files that are not a nixxane bot share, contain unsafe keys, or are too large are refused, every value must have the type of the setting it replaces, and unknown settings are dropped. Old exports from the previous Export button still import.</li>
+          <li>The old Export button is now called Export full backup (with my positions).</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/43d39f4">1.2.109</a> · Fix: stat point settings are kept after a reload</h3>
         <ul>
           <li>The Stat points settings from 1.2.108 were not saved: they went back to off every time the game was reloaded. They are now kept with the rest of your profile.</li>
