@@ -26,6 +26,17 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/213b412">1.2.113</a> · Detailed activity log, pop-out session window and return choices</h3>
+        <ul>
+          <li>Structured activity history, contributed by Joggio: categories, outcomes, session markers and grouped repeats, with filters, search, pause and follow, an optional bounded 10-minute command capture, and a local export with a preview. Names, free text and positions stay out of an export unless you tick raw, and nothing is uploaded.</li>
+          <li>Messages use monster names and plain language. Cast code 5 becomes one Skill not ready yet row with a count instead of repeated warnings. Select log text and press Ctrl+C to copy it.</li>
+          <li>A session window with live totals and the log opens from the Session button, or from Pop out under Settings, Recent activity. It never opens by itself, stays on screen when you minimise the bot, and closing it does not stop hunting.</li>
+          <li>The status lines, the feedback line under the buttons and the wide window's Activity box stay on the main panel.</li>
+          <li>Potion delay in milliseconds, saved per character, under Supplies.</li>
+          <li>Town revival can reverse to the last return-scroll point (the default) or to where you died. The death spot is only used when you died inside the hunting area, because hunting starts again only from inside it; a death further away reverses to the scroll point.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/31a7a80">1.2.112</a> · Follow a party member (auto trace)</h3>
         <ul>
           <li>New Follow a party member group on the Party page. Tick it, choose a member (or leave it on the party leader) and the bot stays within the distance you set of them while hunting, and hunts around them instead of around your saved hunting spot.</li>
