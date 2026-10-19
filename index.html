@@ -26,6 +26,15 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0188a9b">1.2.116</a> · Walk to a far hunting spot</h3>
+        <ul>
+          <li><strong>Return &amp; hunt</strong>, revival return and reconnect now walk to a hunting spot more than 600 m away instead of telling you to walk there yourself. The trip is walked in short legs, because the game only publishes collision data for the area around the character; each leg crosses into the next region and the next leg is planned from the newly loaded map.</li>
+          <li>The status line shows the leg and the distance left. A blocked leg end is replaced by a nearby walkable point, and a leg that makes no progress is retried before it is reported. Death, manual control and <strong>Stop all</strong> cancel the walk at once.</li>
+          <li>A spot beyond about 14 km, a walk longer than 30 minutes, or one that stops making progress is cancelled with a message instead of walking forever. Another world and dungeons still have no walking route.</li>
+          <li>A long-range route planner is built in and will take over for trips inside one map area once its route data is published; until then the bot walks in legs.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/5698e2c">1.2.115</a> · Narrow window: buttons stay put</h3>
         <ul>
           <li>In the compact window the status lines and the waiting note changed height as lines came and went, which moved the buttons below them and caused misclicks. They now reserve their space, so the buttons stay where they are.</li>
