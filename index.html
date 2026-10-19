@@ -26,6 +26,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/43d39f4">1.2.109</a> · Fix: stat point settings are kept after a reload</h3>
+        <ul>
+          <li>The Stat points settings from 1.2.108 were not saved: they went back to off every time the game was reloaded. They are now kept with the rest of your profile.</li>
+          <li>A new test checks that every setting group survives a reload of the saved profile, so a new group cannot be forgotten like this again.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/8bb400b">1.2.108</a> · Auto stat points (Strength and Intelligence)</h3>
         <ul>
           <li>New Stat points group in Settings: tick Spend stat points automatically and the bot spends your unspent stat points on Strength and Intelligence, one point at a time, as you level up.</li>
