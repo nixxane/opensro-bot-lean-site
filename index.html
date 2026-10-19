@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/8bb400b">1.2.108</a> · Auto stat points (Strength and Intelligence)</h3>
+        <ul>
+          <li>New Stat points group in Settings: tick Spend stat points automatically and the bot spends your unspent stat points on Strength and Intelligence, one point at a time, as you level up.</li>
+          <li>The split is a ratio. 1 and 0 puts everything into Strength, 0 and 1 everything into Intelligence, 2 and 1 spends two Strength points for every Intelligence point. A reserve keeps some points unspent.</li>
+          <li>Each point is confirmed by your unspent count going down before the next is sent. A point the game does not accept is not resent for a minute. It is off by default and the status line says what it is doing.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/611ae13">1.2.107</a> · Buff weapon swapping explains itself</h3>
         <ul>
           <li>The Buffs & imbue page now lists every buff assigned to a weapon set and what it is waiting for: how many seconds an active buff has left (the swap only happens when it is about to end), that it is due now, that the skill is not learned, or why it was skipped.</li>
