@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0a60ed8">1.2.118</a> · Alt accounts join the main account's party</h3>
+        <ul>
+          <li><strong>Join the main account's party:</strong> a new option on the Party page (Party/Autores in the Classic window) for your other accounts. Tick it and type the main character's name. While the character is not in a party, the bot accepts a party invitation from the main, or finds the main's listing on the party-matching board and applies to it. It does nothing while the character is in another party, and the status line says what it is doing (looking for the listing, applying, party full, level outside the listing's range).</li>
+          <li>On the main account, tick <strong>Auto-recruit</strong> and <strong>Auto-accept party-matching joins</strong> so the listing is there and the applications are answered. Leave the new option off on the main account.</li>
+          <li>It also brings an account back into the party after a disconnect: once automatic reconnect has the character back in the game, the party is rejoined the same way. Tested with simulated game state only, not yet on a live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/a28e122">1.2.117</a> · Classic window and Max every skill</h3>
         <ul>
           <li><strong>Classic window:</strong> a third layout, opt-in with the Classic button at the top of the panel (screens at least 900 px wide). It is a fixed-size window laid out like SBot: a menu bar, HP, MP and EXP bars with the bot status beside them, three wide buttons (Start / stop, Return &amp; hunt, Stop all), the tabs down the left, and your session numbers, supplies and Start / Stop training always on the right. The tabs are Settings, Skills, Items/Storage, Training place, Party/Autores, Player buffing, Auto alchemy and Extra, then Map, Wardrobe and Setup. They hold the same settings as the compact and wide pages, so a change made in one window shows in the others. Compact brings the small window back.</li>
