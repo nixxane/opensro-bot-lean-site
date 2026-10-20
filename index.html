@@ -26,6 +26,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2c439ab">1.2.122</a> · Revive and return after dying while disconnected</h3>
+        <ul>
+          <li>If the character was killed while the connection was gone (mobs kept hitting it), the bot came back, saw a dead character and gave up: "hunting was not resumed". It never revived or walked back to the hunting spot.</li>
+          <li>Now, when hunting was running and the character comes back dead, the bot starts hunting again so the normal death handling takes over: it revives (with "Revive at return point and continue" or the town auto-revive on) and walks back to the hunting spot. With "On death" set to "Stop hunting", it stops after the death, as it always does.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/e3babc7">1.2.121</a> · Recover from an expired game session</h3>
         <ul>
           <li>When the connection is gone for more than about 30 seconds the server ends the game session, and the game shows "Your session ended while the connection was gone. Please log in again." The bot used to keep trying to resume that session, which can no longer work, and the window stayed on screen.</li>
