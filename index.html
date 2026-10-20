@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2df375b">1.2.124</a> · After a disconnect in town, do the town services and reverse</h3>
+        <ul>
+          <li>After reconnecting, the bot walked from town to the hunting spot in short legs. From town that route often does not exist ("no walkable route to the hunting spot"), so it gave up and the character stayed in town.</li>
+          <li>Now, when the character is back in a town far from the hunting spot and the town cycle's "Revive in town and reverse to last scroll point" is on, the bot runs the same trip as after a death: town services (potions, repairs, storage), then the reverse scroll to the last scroll point, then hunting. This covers a disconnect in town, while loading town, or a death while disconnected.</li>
+          <li>Without that setting, or when the character is not in a known town, it still walks back as before. Written from the code and simulated game state; not yet seen on a live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/56623f2">1.2.123</a> · Alt accounts keep applying to the main's party</h3>
         <ul>
           <li>With two alt accounts joining the same main, one could get in while the other sat on "Waiting for the party board…" forever. The main answers one application at a time, so the second application could be dropped, and the alt never tried again.</li>
