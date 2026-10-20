@@ -26,6 +26,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/56623f2">1.2.123</a> · Alt accounts keep applying to the main's party</h3>
+        <ul>
+          <li>With two alt accounts joining the same main, one could get in while the other sat on "Waiting for the party board…" forever. The main answers one application at a time, so the second application could be dropped, and the alt never tried again.</li>
+          <li>An application that has not been answered after 30 seconds is now sent again, for as long as the alt is outside the main's party. The check already ran on every tick; only this wait was open-ended. Found by reading the code with two alts in mind; not yet confirmed on a live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2c439ab">1.2.122</a> · Revive and return after dying while disconnected</h3>
         <ul>
           <li>If the character was killed while the connection was gone (mobs kept hitting it), the bot came back, saw a dead character and gave up: "hunting was not resumed". It never revived or walked back to the hunting spot.</li>
