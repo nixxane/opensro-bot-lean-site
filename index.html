@@ -26,6 +26,15 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2127d2c">1.2.128</a> · Town trips no longer stop on an item the merchant won't buy</h3>
+        <ul>
+          <li>A town trip could stop at the weapon merchant with "Inventory rejected: 2". The bot had tried to sell an item the game does not allow merchants to buy (quest and event items, for example), and one refusal ended the whole trip.</li>
+          <li>Items the game marks unsellable are now never offered, even with a Sell rule. They stay in the pet or bag.</li>
+          <li>If the merchant still refuses an item, the bot keeps it, logs a warning and sells the rest, then carries on with the trip.</li>
+          <li>Written from the code and simulated game state; not yet seen on a live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/4ca991c">1.2.127</a> · Bag selling no longer stops on a full bag</h3>
         <ul>
           <li>With <strong>Sell items from the character bag too</strong> on, a town trip with a completely full bag stopped before it ever reached the merchant that sells: at arrival ("free a character bag slot"), or at the potion merchant (no room for potions).</li>
