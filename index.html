@@ -26,6 +26,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/4ca991c">1.2.127</a> · Bag selling no longer stops on a full bag</h3>
+        <ul>
+          <li>With <strong>Sell items from the character bag too</strong> on, a town trip with a completely full bag stopped before it ever reached the merchant that sells: at arrival ("free a character bag slot"), or at the potion merchant (no room for potions).</li>
+          <li>Now, with that switch on, the trip goes to the repair merchant first (sell, ammunition, repair), then the potion merchant, then the world statue. A full bag is emptied before potions are bought. With the switch off, the order is unchanged.</li>
+          <li>Written from the code and simulated game state; not yet seen on a live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0d5eeb4">1.2.126</a> · Sell from the character bag on town trips</h3>
         <ul>
           <li>New switch in Scroll town cycle: <strong>Sell items from the character bag too</strong>. When on, the town trip sells unprotected items from your own bag at the repair merchant, after the pet loot, by the same rules as pet loot. Off by default.</li>
