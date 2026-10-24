@@ -134,3 +134,32 @@ table.messages th { color: var(--muted); font-weight: 600; }
   table.messages th, table.messages td { padding: 6px 4px; }
 }
 @media (max-width: 420px) { .features { grid-template-columns: 1fr; } }
+
+/* Easy guide: pictures first, few words, big targets. */
+.easy main { max-width: 620px; }
+.easy h1 { font-size: 40px; }
+.easy-lead { font-size: 20px; }
+.ring-key { padding: 0 6px; border: 3px solid #ff3b30; border-radius: 8px; }
+.easy-steps { padding: 0; list-style: none; counter-reset: easy; }
+.easy-steps > li { position: relative; margin: 22px 0; padding: 22px 22px 24px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); counter-increment: easy; font-size: 20px; line-height: 1.5; }
+.easy-steps > li::before {
+  content: counter(easy); position: absolute; top: -14px; right: 18px; width: 40px; height: 40px; border-radius: 50%;
+  color: #1b2418; background: #dfc999; font-weight: 800; font-size: 20px; line-height: 40px; text-align: center; box-shadow: var(--shadow);
+}
+.easy-head { display: flex; align-items: center; gap: 14px; }
+.easy-icon { font-size: 40px; line-height: 1; }
+.easy-steps h2 { margin: 0; padding: 0; border: 0; font-size: 26px; }
+.easy-steps p { margin: 14px 0 0; }
+.big-button { display: inline-block; padding: 14px 26px; border-radius: 12px; color: #fff; background: var(--accent); font-weight: 700; font-size: 20px; text-decoration: none; }
+.big-button:hover { background: var(--accent-hover); }
+.big-button.gold { color: #1b2418; background: linear-gradient(#ecd9a8, #d4b678); }
+.big-button.gold:hover { background: linear-gradient(#f3e4bb, #dcc08a); }
+kbd.big-key { padding: 4px 14px; border-bottom-width: 4px; border-radius: 8px; font-size: 22px; }
+.dot-num { display: inline-block; width: 30px; height: 30px; border: 2px solid #fff; border-radius: 50%; color: #fff; background: #ff3b30; font-weight: 700; font-size: 17px; line-height: 26px; text-align: center; vertical-align: 2px; box-shadow: 0 0 0 1px #ff3b30; }
+.easy-shot { display: block; width: 100%; max-width: 470px; height: auto; margin: 18px auto 0; border-radius: 10px; box-shadow: var(--shadow); }
+.dots { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.dots span { display: inline-flex; align-items: center; gap: 8px; }
+.dot { display: inline-block; width: 20px; height: 20px; border-radius: 50%; }
+.dot.green { background: #4caf50; } .dot.yellow { background: #f0b429; } .dot.red { background: #e5484d; }
+.more { font-size: 18px; }
+@media (max-width: 640px) { .easy-steps > li { padding: 20px 16px 22px; font-size: 18px; } .easy h1 { font-size: 34px; } }
