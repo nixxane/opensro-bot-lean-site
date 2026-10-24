@@ -67,7 +67,8 @@ kbd {
 
 /* Screenshot and feature grid */
 .preview { margin: -96px 0 0; position: relative; }
-.preview img { display: block; border: 1px solid #3c3a2e; border-radius: 10px; box-shadow: 0 20px 50px rgb(0 0 0 / 30%); }
+.preview img { display: block; margin: 0 auto; border: 1px solid #3c3a2e; border-radius: 10px; box-shadow: 0 20px 50px rgb(0 0 0 / 30%); }
+.preview figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; text-align: center; }
 .hero:has(~ main .preview) .hero-inner { padding-bottom: 136px; }
 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 36px 0 0; padding: 0; list-style: none; }
 .features li { margin: 0; padding: 14px 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--muted); font-size: 14px; line-height: 1.5; }
