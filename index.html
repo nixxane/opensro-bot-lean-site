@@ -10,18 +10,33 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1><img class="logo" src="./favicon.svg?v=1.2.40" width="48" height="48" alt="">nixxane bot</h1>
+      <p class="lead">A compact OpenSRO bot for combat, potions, pet loot and town trips.</p>
+      <p class="download"><a class="install" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install / update bot</a><a class="secondary" href="./guide.html">Setup guide</a></p>
+      <p class="version"><a id="release" href="https://github.com/nixxane/opensro-bot-lean/commits/main/">View latest version</a> · <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a> · <a href="#patch-notes">Patch notes</a></p>
+    </div>
+  </header>
   <main>
-    <h1>nixxane bot</h1>
-    <p>A compact OpenSRO bot for combat, potions, pet loot and town trips.</p>
-    <p class="download"><a class="install" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install / update bot</a></p>
-    <p class="version"><a href="./guide.html">Setup guide</a> · <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a> · <a id="release" href="https://github.com/nixxane/opensro-bot-lean/commits/main/">View latest version</a> · <a href="#patch-notes">Patch notes</a></p>
+    <figure class="preview">
+      <img src="guide/15-wide-party.png" width="1020" height="920" alt="The bot's wide window: HP, MP and EXP bars, the pages listed on the left, party heal and buff settings in the middle, and session numbers on the right.">
+    </figure>
+    <ul class="features">
+      <li><b>Combat</b>Attack skills, buffs and weapon imbue around a saved hunting spot.</li>
+      <li><b>Potions</b>HP, MP and vigor thresholds, cure pills and pet recovery kits.</li>
+      <li><b>Pet loot</b>Your pet collects drops while you fight, by your own filters.</li>
+      <li><b>Town trips</b>Sell, repair, restock and reverse-scroll back to the hunt.</li>
+      <li><b>Party</b>Heal and buff party members, recruit and follow.</li>
+      <li><b>Reconnect</b>Gets back into the game after a disconnect and hunts on.</li>
+    </ul>
     <h2>Quick setup</h2>
-    <ol>
+    <ol class="steps">
       <li>Install <a href="https://www.tampermonkey.net/">Tampermonkey</a> in your browser.</li>
       <li>Install the bot above, disable other OpenSRO bot scripts, then reload the game.</li>
       <li>Save your hunting spot, choose skills and set your loot and potion options. Press <kbd>F8</kbd> to start.</li>
     </ol>
-    <p class="controls"><kbd>F8</kbd> Start / stop · <kbd>F7</kbd> Fold · <kbd>Shift + F7</kbd> Hide / show · <kbd>×</kbd> Minimise</p>
+    <p class="controls"><span><kbd>F8</kbd> Start / stop</span><span><kbd>F7</kbd> Fold</span><span><kbd>Shift + F7</kbd> Hide / show</span><span><kbd>×</kbd> Minimise</span></p>
     <section id="patch-notes" aria-labelledby="patch-notes-title">
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
