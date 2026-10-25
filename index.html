@@ -42,6 +42,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/936f705">1.2.136</a> · Buff swap carries on when the game refuses a weapon</h3>
+        <ul>
+          <li>If the game will not equip the bag weapon picked for a buff (for example a level or class limit), the bot now notices within seconds, puts your gear back, remembers not to pick that weapon again, and keeps hunting. Before, it waited fifteen seconds and stopped with "manual equipment review needed".</li>
+          <li>When a swap does still fail, the message and the overlay now say which item and slots were involved instead of only "manual equipment review needed".</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/1552e22">1.2.135</a> · Classic skill icons and imbue-only picker</h3>
         <ul>
           <li>In the Classic (SBot-style) window, skill icons had white borders, a smaller size and no gold border on selected skills. They now look the same as in the normal window.</li>
