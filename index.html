@@ -42,6 +42,25 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/fa6b4f1">1.2.133</a> · Buffs wear the weapon they need</h3>
+        <ul>
+          <li>With <strong>Swap weapons for buffs</strong> on, a buff your current weapon cannot cast is now cast with a matching weapon from your bag, picked from the skill's own weapon requirement. No saved buff set is needed. Your combat weapon and shield come back afterward.</li>
+          <li>The best usable bag weapon is used (highest +, not broken, within your level). Identical copies of a weapon no longer block the swap. A weapon the game refuses to equip is not tried again.</li>
+          <li>One-handed buff weapons keep your shield on; two-handed ones take it off and put it back. Keep one bag slot free.</li>
+          <li>The <strong>Buffs &amp; imbue</strong> page shows what each automatic buff is waiting for, or that no usable weapon is in your bag. <strong>Wear the weapon each buff needs</strong> switches this off; saved sets still work for buffs you assign to one.</li>
+          <li>Every equipment move is still confirmed before the next step or the cast. Imbues and attack skills are not swapped.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d950ea0">1.2.132</a> · Berserk has its own Giant party switch</h3>
+        <ul>
+          <li><strong>Combat -&gt; Berserk</strong> now has a <strong>Giant party</strong> switch, right under Giants. Berserk on party Giants follows it; other party monsters still follow <strong>Party monsters</strong>.</li>
+          <li>Saved profiles keep working: until you change it, <strong>Giant party</strong> takes whatever <strong>Party monsters</strong> was set to. New profiles start with it off.</li>
+          <li>Reported by Rebraxin (<a href="https://github.com/nixxane/opensro-bot-lean/pull/11">PR #11</a>).</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d76088f">1.2.131</a> · Type in or copy hunting spot coordinates on the Map</h3>
         <ul>
           <li>The <strong>Map</strong> page's <strong>Hunting area</strong> now has <strong>X</strong> and <strong>Y</strong> fields: type the outdoor coordinates (whole metres, as shown on the map) and press <strong>Set spot</strong> to save that place as the hunting spot. Wrong values, dungeons and not being in the world are refused with a message.</li>
