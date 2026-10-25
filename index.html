@@ -42,6 +42,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/1655713">1.2.134</a> · Fix bot stopping when a buff needs another weapon</h3>
+        <ul>
+          <li>Fixes 1.2.133: when a buff needed a bag weapon, the bot stopped with "ItemRules.requiredLevel is not a function" instead of swapping. The weapon's level requirement is now read correctly.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/fa6b4f1">1.2.133</a> · Buffs wear the weapon they need</h3>
         <ul>
           <li>With <strong>Swap weapons for buffs</strong> on, a buff your current weapon cannot cast is now cast with a matching weapon from your bag, picked from the skill's own weapon requirement. No saved buff set is needed. Your combat weapon and shield come back afterward.</li>
