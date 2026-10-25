@@ -42,6 +42,15 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/16c2c99">1.2.129</a> · Bag selling only sells ordinary gear</h3>
+        <ul>
+          <li><strong>Sell items from the character bag</strong> used the pet-loot rules, which are meant for drops. In your own bag that could sell pet summon scrolls and flutes, avatars, devil spirits, job suits and item mall items such as Premium or stat-reset scrolls. It now sells only ordinary Chinese and European weapons, armour, shields and accessories (renamed <strong>Sell ordinary gear from the character bag too</strong>). Other bag items are sold only if you give them a Sell rule.</li>
+          <li>With bag selling on and a full bag, the trip no longer stops at the warehouse with "No temporary character bag slot": it sells at the repair merchant first, then visits the warehouse.</li>
+          <li>After reconnecting in town, the town cycle starts from where the character stands instead of waiting at the return-scroll landing spot (which timed out after 90 s and stopped hunting). In a different town from your saved services the bot walks back instead.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2127d2c">1.2.128</a> · Town trips no longer stop on an item the merchant won't buy</h3>
         <ul>
           <li>A town trip could stop at the weapon merchant with "Inventory rejected: 2". The bot had tried to sell an item the game does not allow merchants to buy (quest and event items, for example), and one refusal ended the whole trip.</li>
