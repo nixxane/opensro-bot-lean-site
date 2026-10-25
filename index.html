@@ -42,6 +42,16 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d76088f">1.2.131</a> · Type in or copy hunting spot coordinates on the Map</h3>
+        <ul>
+          <li>The <strong>Map</strong> page's <strong>Hunting area</strong> now has <strong>X</strong> and <strong>Y</strong> fields: type the outdoor coordinates (whole metres, as shown on the map) and press <strong>Set spot</strong> to save that place as the hunting spot. Wrong values, dungeons and not being in the world are refused with a message.</li>
+          <li><strong>Set actual position</strong> saves where you stand, as <strong>Set hunting spot here</strong> did. <strong>Get position</strong> fills in your current coordinates and <strong>Copy</strong> copies them, without changing the saved spot.</li>
+          <li>Clicking the map and pressing <strong>Make this the hunting spot</strong> works as before. A typed spot uses your current height, the same as a map click.</li>
+          <li>Contributed by BigzGit (<a href="https://github.com/nixxane/opensro-bot-lean/pull/3">PR #3</a>).</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/1eb44fb">1.2.130</a> · Pet summon scrolls are never sold</h3>
         <ul>
           <li>Town trips sold pet summon scrolls and flutes kept in the pickup pet's bag at the weapon merchant, because the pet-loot rules treated them as ordinary items. Selling one loses that pet. From 1.2.126 to 1.2.128, <strong>Sell items from the character bag too</strong> could also sell them from your own bag.</li>
