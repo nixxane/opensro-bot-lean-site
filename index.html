@@ -42,6 +42,15 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/1eb44fb">1.2.130</a> · Pet summon scrolls are never sold</h3>
+        <ul>
+          <li>Town trips sold pet summon scrolls and flutes kept in the pickup pet's bag at the weapon merchant, because the pet-loot rules treated them as ordinary items. Selling one loses that pet. From 1.2.126 to 1.2.128, <strong>Sell items from the character bag too</strong> could also sell them from your own bag.</li>
+          <li>Pet summon scrolls and flutes are now never sold, from the pet or the bag, not even with a Sell rule.</li>
+          <li>If you lost one, the merchant's buyback list keeps your last 5 sold items; it may still be there if little was sold after it.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/16c2c99">1.2.129</a> · Bag selling only sells ordinary gear</h3>
         <ul>
           <li><strong>Sell items from the character bag</strong> used the pet-loot rules, which are meant for drops. In your own bag that could sell pet summon scrolls and flutes, avatars, devil spirits, job suits and item mall items such as Premium or stat-reset scrolls. It now sells only ordinary Chinese and European weapons, armour, shields and accessories (renamed <strong>Sell ordinary gear from the character bag too</strong>). Other bag items are sold only if you give them a Sell rule.</li>
