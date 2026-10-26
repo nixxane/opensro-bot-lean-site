@@ -42,6 +42,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/8b366ff">1.2.144</a> · Lure mode for tanks, thanks to Rebraxin</h3>
+        <ul>
+          <li>New <strong>Lure</strong> section (Combat → Hunt area, and the classic Training place page). A tank walks to saved pull points in turn, taunts the nearest monster, brings it back to the hunting spot, pauses on the way so it keeps up, then holds while the party takes over. It never attacks. Off by default.</li>
+          <li>New setting <strong>Stop pulling at this many monsters in the training area</strong>: while that many monsters are already at the hunting spot, the tank waits instead of pulling more. 0 turns it off.</li>
+          <li>Lure mode was run on the live server by a player with a Warrior tank in a four-character party, who reported it works. The stop-pulling setting is tested in simulation only.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/555d495">1.2.143</a> · Party: accept list, party leader name and leave-if-wrong-leader</h3>
         <ul>
           <li>New <strong>Accept only these players</strong> box on the Party page. Auto-accept then answers only applicants whose character name is on the list (comma separated, any letter case). Empty means everyone, as before. The list is saved per character.</li>
