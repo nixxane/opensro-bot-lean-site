@@ -42,6 +42,15 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/88f1c49">1.2.138</a> · Walking no longer gets stuck on obstacles</h3>
+        <ul>
+          <li>When the character stops against something while walking (return to the hunting spot, town trips, potion restocking and trade runs), the bot now notices after a few seconds, marks the spot ahead as blocked and plans a way around it.</li>
+          <li>It tries a few times at one place. If it still cannot get past, it stops with a clear message ("an obstacle blocks the way") instead of standing there.</li>
+          <li>Normal move commands only: no teleporting and no collision bypass.</li>
+          <li>Tested in simulation only (an invisible object the collision map does not know about); not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/e9626bf">1.2.137</a> · Automatic trading between towns</h3>
         <ul>
           <li>New <strong>Auto trade</strong> page. Pick the town to buy in and the town to sell in, press <strong>Start trading</strong>, and the bot does the whole run: summons your transport, buys the dearest trade goods you can afford at the trade merchant, walks to the other town, and sells everything there. It reports the gold gained.</li>
