@@ -42,6 +42,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2c4d24c">1.2.141</a> · The pet status no longer makes the panel jump</h3>
+        <ul>
+          <li>The pet status lines (on the Loot page and in Supplies) now sit in a box of fixed height. When the text is longer than the box it scrolls inside it (hover shows the full text), so the rest of the panel stays where it is as the status changes.</li>
+          <li>Layout fix only; checked in code and tests, not yet confirmed on the live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9f2b4b8">1.2.140</a> · Dying during a buff weapon swap no longer leaves the buff weapon on</h3>
         <ul>
           <li>If your character died (or the world changed) while the bot was wearing a buff weapon, the bot used to stop hunting and leave that weapon on, so after reviving you could not attack until you pressed "Restore combat gear". Now hunting carries on, and the bot puts your combat weapon and shield back on by itself as soon as the character is alive again, before the return trip.</li>
