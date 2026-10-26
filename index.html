@@ -42,6 +42,17 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/e9626bf">1.2.137</a> · Automatic trading between towns</h3>
+        <ul>
+          <li>New <strong>Auto trade</strong> page. Pick the town to buy in and the town to sell in, press <strong>Start trading</strong>, and the bot does the whole run: summons your transport, buys the dearest trade goods you can afford at the trade merchant, walks to the other town, and sells everything there. It reports the gold gained.</li>
+          <li><strong>Deliveries</strong> sets how many runs to do (0 = until you stop it). With more than one, the bot buys the second town's goods and carries them back.</li>
+          <li>Potions keep being used on the road, and at each town the bot first tops up the potions from your Supplies page targets.</li>
+          <li>Needs your trader job suit on and a transport scroll in the bag (or a transport already summoned), plus enough gold. Walking only, no teleports. Bandits are not fought; the run stops with a message if you die, take manual control, or the merchant does not link to your transport.</li>
+          <li>Towns: Jangan, Donwhang, Hotan, Samarkand and Constantinople.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server. The bot cannot yet buy a transport for you.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/936f705">1.2.136</a> · Buff swap carries on when the game refuses a weapon</h3>
         <ul>
           <li>If the game will not equip the bag weapon picked for a buff (for example a level or class limit), the bot now notices within seconds, puts your gear back, remembers not to pick that weapon again, and keeps hunting. Before, it waited fifteen seconds and stopped with "manual equipment review needed".</li>
