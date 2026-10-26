@@ -42,6 +42,14 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/61615e7">1.2.142</a> · Buff weapon swaps work with a full bag when no shield has to come off</h3>
+        <ul>
+          <li>Swapping to a buff weapon exchanges places with the weapon in your bag, so it needs no free bag slot. The bot used to refuse to start with a completely full bag. It now starts whenever no shield (or arrows) has to be taken off, and only asks for one free slot when one does.</li>
+          <li>Town trips and the rest of the nearly-full-bag handling are unchanged. If the character still gets stuck with one slot left, send the exact message the bot shows.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2c4d24c">1.2.141</a> · The pet status no longer makes the panel jump</h3>
         <ul>
           <li>The pet status lines (on the Loot page and in Supplies) now sit in a box of fixed height. When the text is longer than the box it scrolls inside it (hover shows the full text), so the rest of the panel stays where it is as the status changes.</li>
