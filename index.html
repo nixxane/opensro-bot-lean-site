@@ -42,6 +42,16 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/555d495">1.2.143</a> · Party: accept list, party leader name and leave-if-wrong-leader</h3>
+        <ul>
+          <li>New <strong>Accept only these players</strong> box on the Party page. Auto-accept then answers only applicants whose character name is on the list (comma separated, any letter case). Empty means everyone, as before. The list is saved per character.</li>
+          <li><strong>Main account character name</strong> is now <strong>Party leader name</strong>, and the option reads <strong>Join the party leader's party</strong>. Your saved name carries over.</li>
+          <li>New option <strong>Leave the party if its leader is someone else</strong>: for your other accounts, the bot leaves a party whose leader is not the named character, then looks for the named leader's party as usual.</li>
+          <li>Not included: inviting players from a list. Auto-recruit still works through the party-matching listing.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/61615e7">1.2.142</a> · Buff weapon swaps work with a full bag when no shield has to come off</h3>
         <ul>
           <li>Swapping to a buff weapon exchanges places with the weapon in your bag, so it needs no free bag slot. The bot used to refuse to start with a completely full bag. It now starts whenever no shield (or arrows) has to be taken off, and only asks for one free slot when one does.</li>
