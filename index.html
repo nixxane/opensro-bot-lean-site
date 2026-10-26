@@ -42,6 +42,21 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/9f2b4b8">1.2.140</a> · Dying during a buff weapon swap no longer leaves the buff weapon on</h3>
+        <ul>
+          <li>If your character died (or the world changed) while the bot was wearing a buff weapon, the bot used to stop hunting and leave that weapon on, so after reviving you could not attack until you pressed "Restore combat gear". Now hunting carries on, and the bot puts your combat weapon and shield back on by itself as soon as the character is alive again, before the return trip.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/da7218d">1.2.139</a> · Back to the hunting spot by reverse scroll after logging in dead</h3>
+        <ul>
+          <li>When a character was dead at login and wakes up in town, the bot no longer tries to walk from town to the hunting spot. With town services set up it does the town trip (potions, repair, warehouse) and then uses the reverse return scroll, the same way it does after dying while hunting.</li>
+          <li>Outside town nothing changes: small returns inside the hunting area still walk as before.</li>
+          <li>Tested in simulation only; not yet confirmed on the live server. Needs town services saved and a reverse return scroll in the bag.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/88f1c49">1.2.138</a> · Walking no longer gets stuck on obstacles</h3>
         <ul>
           <li>When the character stops against something while walking (return to the hunting spot, town trips, potion restocking and trade runs), the bot now notices after a few seconds, marks the spot ahead as blocked and plans a way around it.</li>
