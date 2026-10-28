@@ -42,6 +42,17 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/f20b4ed">1.2.161</a> · Start the bot when the character enters the game</h3>
+        <ul>
+          <li>New option under Settings → Behaviour: Start the bot when this character enters the game (off by default, per character).</li>
+          <li>About 5 seconds after entering: at the hunting spot it hunts; in the town of your saved town services it does them and reverses back; anywhere else it walks back; dead, it revives first.</li>
+          <li>Once per entry. Stop all, F8 or a reconnect cancel it, so a bot you stopped stays stopped.</li>
+          <li>Walks that start on a blocked tile or right against a wall now step out to open ground first, never through the wall.</li>
+          <li>A town walk that finds no route goes to the town start once and tries the service again from there.</li>
+          <li>Thanks to corevider for this one. Tested in simulation, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/290fe0f">1.2.160</a> · F6 minimises and restores the panel</h3>
         <ul>
           <li>F6 now does what the × does: it minimises the panel to the small icon, and a second F6 brings it back. The bot keeps running either way.</li>
