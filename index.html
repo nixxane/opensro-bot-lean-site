@@ -37,10 +37,19 @@
       <li>Install the bot above, disable other OpenSRO bot scripts, then reload the game.</li>
       <li>Save your hunting spot, choose skills and set your loot and potion options. Press <kbd>F8</kbd> to start.</li>
     </ol>
-    <p class="controls"><span><kbd>F8</kbd> Start / stop</span><span><kbd>F7</kbd> Fold</span><span><kbd>Shift + F7</kbd> Hide / show</span><span><kbd>×</kbd> Minimise</span></p>
+    <p class="controls"><span><kbd>F8</kbd> Start / stop</span><span><kbd>F7</kbd> Fold</span><span><kbd>Shift + F7</kbd> Hide / show</span><span><kbd>F6</kbd> or <kbd>×</kbd> Minimise / restore</span></p>
     <section id="patch-notes" aria-labelledby="patch-notes-title">
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/290fe0f">1.2.160</a> · F6 minimises and restores the panel</h3>
+        <ul>
+          <li>F6 now does what the × does: it minimises the panel to the small icon, and a second F6 brings it back. The bot keeps running either way.</li>
+          <li>F6 also brings back a panel hidden with Shift+F7.</li>
+          <li>Ignored while typing in a field or when the key is held down, and the game never sees the key.</li>
+          <li>Tested in simulation and on a test page, not in a live game.</li>
+        </ul>
+      </article>
       <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/06dcafd">1.2.159</a> · SoX filter on the Items page, steadier status box</h3>
         <ul>
