@@ -42,6 +42,30 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/29a932f">1.2.153</a> · Town trips work in low-level towns</h3>
+        <ul>
+          <li>Low-level characters no longer get stuck in town when the potion merchant does not sell X-Large potions. The town cycle now buys the largest HP or MP potion that merchant does sell, and counts that potion for the low-stock check.</li>
+          <li>Characters in towns that do sell X-Large potions behave exactly as before.</li>
+          <li>Reported on Discord. Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+<article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/71c7cec">1.2.152</a> · Party buffs now also go on yourself</h3>
+        <ul>
+          <li>Friendly buffs you picked under Party buffs (for example Body Deity and Soul Deity) are now cast on your own character too, after the party members. Before, they only went to other members.</li>
+          <li>Party buffs also work when you are alone and have buffs picked, instead of stopping with "Not in a party."</li>
+          <li>Tested in simulation only; not tried on the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/346351f">1.2.151</a> · Town trips that start in town no longer waste a Return Scroll</h3>
+        <ul>
+          <li>If the bot starts a town trip while you are already standing in town (for example you start hunting there with the town cycle on), it now walks straight to the services. It no longer uses a Return Scroll, and no longer needs one in the bag.</li>
+          <li>After the trip it uses the reverse scroll to go back to your last scroll point, or your hunting area if there is none, and hunting resumes there.</li>
+          <li>Reported on Discord by egecan (#22). Tested in simulation only, not in a live game. It relies on your town services being saved and within about 500 m of where you stand.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/8490873">1.2.150</a> · No Render button: stop the game drawing while the bot runs</h3>
         <ul>
           <li>A new <strong>No Render</strong> button sits in the NIX header, between the version and <strong>Wide</strong>. It makes the game stop drawing and covers it with a black screen; combat and pet pickup keep running. Press <strong>Render</strong> to bring the picture back, no reload needed.</li>
@@ -942,20 +966,4 @@
     <footer><a href="./guide.html">Setup guide</a><a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a><a href="https://github.com/nixxane/opensro-bot-lean#readme">README</a><a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a><a href="https://github.com/nixxane/opensro-bot-lean/blob/main/LICENSE">MIT licence</a><a href="https://github.com/nixxane/opensro-bot-lean/issues">Report an issue</a><button id="theme-toggle" type="button" hidden>Dark mode</button></footer>
   </main>
 </body>
-</html>      <article class="release">
-        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/71c7cec">1.2.152</a> · Party buffs now also go on yourself</h3>
-        <ul>
-          <li>Friendly buffs you picked under Party buffs (for example Body Deity and Soul Deity) are now cast on your own character too, after the party members. Before, they only went to other members.</li>
-          <li>Party buffs also work when you are alone and have buffs picked, instead of stopping with "Not in a party."</li>
-          <li>Tested in simulation only; not tried on the live server.</li>
-        </ul>
-      </article>
-      <article class="release">
-        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/346351f">1.2.151</a> · Town trips that start in town no longer waste a Return Scroll</h3>
-        <ul>
-          <li>If the bot starts a town trip while you are already standing in town (for example you start hunting there with the town cycle on), it now walks straight to the services. It no longer uses a Return Scroll, and no longer needs one in the bag.</li>
-          <li>After the trip it uses the reverse scroll to go back to your last scroll point, or your hunting area if there is none, and hunting resumes there.</li>
-          <li>Reported on Discord by egecan (#22). Tested in simulation only, not in a live game. It relies on your town services being saved and within about 500 m of where you stand.</li>
-        </ul>
-      </article>
-
+</html>
