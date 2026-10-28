@@ -42,6 +42,13 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d40eea4">1.2.158</a> · Repair hammer and idle pet pickup can no longer stop the bot</h3>
+        <ul>
+          <li>An unexpected error in the repair hammer or in pet pickup while the bot is stopped is now logged and skipped, like other optional features, instead of stopping hunting.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0cbb65d">1.2.157</a> · Pickup pet collects while the bot is stopped</h3>
         <ul>
           <li>With a pickup pet set as collector, the pet now keeps picking up your wanted drops when the bot is off, using the same filters as while hunting.</li>
