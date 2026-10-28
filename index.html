@@ -42,6 +42,16 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0cbb65d">1.2.157</a> · Pickup pet collects while the bot is stopped</h3>
+        <ul>
+          <li>With a pickup pet set as collector, the pet now keeps picking up your wanted drops when the bot is off, using the same filters as while hunting.</li>
+          <li>Only the pet does this: the character never walks to loot while the bot is stopped.</li>
+          <li>The pet's settings are not changed when stopped. If its game auto-grab is on, the game collects natively; otherwise NIX sends the selective requests.</li>
+          <li>Paused while a shop or the warehouse is open, and briefly after your own manual actions.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/12f4484">1.2.156</a> · Sell Star gear: Star only</h3>
         <ul>
           <li>The Town page option from 1.2.155 is now "Sell Star gear too (instead of depositing it)" and applies to Star gear only. Moon and Sun gear are still deposited in the warehouse. 1.2.155 wrongly included all three.</li>
