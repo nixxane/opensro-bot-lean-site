@@ -42,6 +42,17 @@
       <h2 id="patch-notes-title">Patch notes</h2>
       <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/2f8a3b3">1.2.174</a> &middot; Pet care: kits, HGP food and revival</h3>
+        <ul>
+          <li>Pet recovery kits no longer drain on a wrong pet HP reading: the pet's maximum comes from the game's pet data, and a pet whose HP never rises on three confirmed kits rests for 5 minutes.</li>
+          <li>New: feed the attack pet HGP recovery potions when its HGP drops below a percentage you set, and buy them on refill trips.</li>
+          <li>New: buy pet recovery kits on refill trips, and pick the smallest kit that really covers the missing HP.</li>
+          <li>New: revive a dead pet with a Grass of life during town trips (off by default).</li>
+          <li>A merchant that does not sell pet supplies is skipped with a notice and never causes repeated town trips.</li>
+          <li>Thanks to duan78 for all four of these (#57 to #60). Tested in simulation, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/f20b4ed">1.2.161</a> · Start the bot when the character enters the game</h3>
         <ul>
           <li>New option under Settings → Behaviour: Start the bot when this character enters the game (off by default, per character).</li>
