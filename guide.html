@@ -6,35 +6,48 @@
   <meta name="description" content="Step-by-step setup guide for NIX: install, first hunt, town trips, pet loot and the optional features.">
   <title>Setup guide · NIX</title>
   <link rel="icon" href="./favicon.svg?v=1.2.40" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
   <link rel="stylesheet" href="./style.css">
+  <script src="./site.js" defer></script>
 </head>
-<body>
-  <main>
-    <p class="back"><a href="./">← NIX</a> · Prefer pictures? <a href="./easy.html">Easy guide</a></p>
-    <h1>Setup guide</h1>
-    <p>From install to your first hunt takes about five minutes. Town trips need a few more steps, and everything else is optional. The screenshots come from a simulated game page, so your skills, icons and numbers will differ; the panel and its labels are the real ones.</p>
-    <nav class="toc" aria-label="Guide sections">
-      <a href="#install">Install</a> · <a href="#first-hunt">First hunt</a> · <a href="#town">Town trips</a> · <a href="#pet">Pet loot</a> · <a href="#more">Optional features</a> · <a href="#problems">If something goes wrong</a>
+<body class="page-guide">
+  <div class="bg-glow" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="./"><img src="./favicon.svg?v=1.2.40" width="28" height="28" alt="">NIX</a>
+    <nav aria-label="Main">
+      <a href="./guide.html" data-nav="guide">Guide</a>
+      <a href="./notes.html" data-nav="notes">Patch notes</a>
+      <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a>
+      <a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a>
     </nav>
-
-    <h2 id="install">1. Install</h2>
+    <a class="btn btn-sm" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install</a>
+  </header>
+  <div class="wrap guide-grid">
+    <aside class="toc" aria-label="Guide sections"><p class="eyebrow">On this page</p><a href="#install">1. Install</a><a href="#first-hunt">2. Your first hunt</a><a href="#town">3. Town trips</a><a href="#pet">4. Pet loot</a><a href="#more">5. Optional features</a><a href="#problems">6. If something goes wrong</a></aside>
+    <main class="prose">
+      <p class="eyebrow">Setup guide</p>
+      <h1 class="page-title">From install to first hunt in five minutes.</h1>
+      <p class="lead">Town trips need a few more steps, and everything else is optional. The screenshots come from a simulated game page, so your skills, icons and numbers will differ; the panel and its labels are the real ones.</p>
+<h2 id="install">1. Install</h2>
     <ol>
       <li>Install <a href="https://www.tampermonkey.net/">Tampermonkey</a> in your browser.</li>
       <li>Open <a href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">the bot script</a> and confirm the install in Tampermonkey.</li>
       <li>Turn off any other OpenSRO bot script. Two bots cannot run together; the second one refuses to start.</li>
       <li>Reload the game. The panel appears at the top right, with the version in its title bar.</li>
     </ol>
-    <img class="shot" src="guide/01-panel.png" width="470" alt="The bot panel: status lines, the Start / stop, Return &amp; hunt and Stop all buttons, the six tabs, and the Skills sub-tab.">
+    <img class="shot" loading="lazy" src="guide/01-panel.png" width="470" alt="The bot panel: status lines, the Start / stop, Return &amp; hunt and Stop all buttons, the six tabs, and the Skills sub-tab.">
     <p>Drag the panel by its title bar; it reopens in the same spot after a reload. The <strong>Wide</strong> button opens a wider window with HP, MP and EXP bars, the pages as a list on the left, session numbers on the right and the activity log at the bottom; <strong>Compact</strong> switches back. The <strong>Map</strong> page shows the game’s minimap around you with your hunt radius; click a point and press <strong>Make this the hunting spot</strong> to hunt there. Under the map you can also type outdoor <strong>X</strong> / <strong>Y</strong> coordinates and press <strong>Set spot</strong>, or use <strong>Get position</strong> and <strong>Copy</strong> to share where you stand. <kbd>F8</kbd> starts and stops the bot, <kbd>F7</kbd> folds the panel, <kbd>Shift + F7</kbd> hides or shows it without stopping the bot. The <strong>×</strong> at the top right (or <kbd>F6</kbd>) minimises the panel to a small icon you can drag anywhere: its dot is green while hunting, yellow during a town trip and red when stopped, it glows when something needs you, and a click (or <kbd>F6</kbd> / <kbd>F7</kbd>) brings the panel back. When a new version is out, an <strong>Update</strong> button appears next to the version: install it in Tampermonkey, then reload the game.</p>
     <p class="note">Settings are saved separately for each character, so every character is set up once.</p>
 
     <h2 id="first-hunt">2. Your first hunt</h2>
     <h3>The Setup page</h3>
     <p>New characters open on the <strong>Setup</strong> page, a checklist of what the bot needs: character, hunting spot, attack skills, potions, what to pick up, town trips, pet and what happens on death. Every row says what is missing and has a button that fixes it or opens the right page; <strong>Fix the next thing</strong> takes you to the first red item. <strong>Starter settings</strong> (Level up, Farm drops, Safe AFK) show every change before you apply them and can be undone. The steps below do the same by hand.</p>
-    <img class="shot" src="guide/00-setup.png" width="470" alt="The Setup page: the ready score, Fix the next thing, and the checklist rows with their status dots and buttons.">
+    <img class="shot" loading="lazy" src="guide/00-setup.png" width="470" alt="The Setup page: the ready score, Fix the next thing, and the checklist rows with their status dots and buttons.">
     <h3>Step 1: save your hunting spot</h3>
     <p>Stand where you want to hunt. Open <strong>Combat → Hunt area</strong> and press <strong>Set hunting spot here</strong>. The bot fights inside the <strong>Hunt radius</strong> around that spot and returns to it when idle. Use <strong>Monster classes</strong> to choose what to attack, and the level and name filters to skip mobs you do not want.</p>
-    <img class="shot" src="guide/02-hunt-area.png" width="470" alt="Combat, Hunt area: the Set hunting spot here button, radius and chase distance, level and name filters, and the monster class checkboxes.">
+    <img class="shot" loading="lazy" src="guide/02-hunt-area.png" width="470" alt="Combat, Hunt area: the Set hunting spot here button, radius and chase distance, level and name filters, and the monster class checkboxes.">
 
     <h3>Step 2: choose your attack skills</h3>
     <p>Open <strong>Combat → Skills</strong> (the first screenshot above). Click a skill icon under <em>Learned attack skills</em> to add it to the rotation, click it again to remove it, and use the arrows to change the order. Hover an icon to see its level, MP cost and cooldown. The tabs at the top (Normal, Champion, Giant and so on) give each monster class its own rotation; a class with none uses the Normal rotation. Only skills your character has learned are offered.</p>
@@ -42,16 +55,16 @@
 
     <h3>Step 3: buffs and weapon imbue</h3>
     <p>Open <strong>Combat → Buffs &amp; imbue</strong>. Click the self-buffs you want kept up, and pick your weapon imbue (the highest learned level is used automatically). Buffs are recast shortly before they expire.</p>
-    <img class="shot" src="guide/04-buffs.png" width="470" alt="Combat, Buffs and imbue: the buff weapon sets section, the selected buffs with their order, and the weapon imbue picker.">
+    <img class="shot" loading="lazy" src="guide/04-buffs.png" width="470" alt="Combat, Buffs and imbue: the buff weapon sets section, the selected buffs with their order, and the weapon imbue picker.">
     <p class="note">Weapon swapping for buffs is optional. If you use it, equip the buff weapon, save it as a set, then put your combat gear back on. Keep one bag slot free. The page lists each buff assigned to a set with the seconds it has left and says what the swap is waiting for: the weapon only changes when a buff is about to end.</p>
 
     <h3>Step 4: potions</h3>
     <p>Open <strong>Supplies → Automatic potion use</strong>. Leave <strong>Use potions automatically</strong> on and set when HP and MP potions are used. Vigor potions have their own thresholds and are used when HP or MP is very low. Cure pills handle abnormal states.</p>
-    <img class="shot" src="guide/06-potions.png" width="470" alt="Supplies, Automatic potion use: potion switches and thresholds, vigor thresholds, cure pills, pet recovery kits, then the Potion restock section.">
+    <img class="shot" loading="lazy" src="guide/06-potions.png" width="470" alt="Supplies, Automatic potion use: potion switches and thresholds, vigor thresholds, cure pills, pet recovery kits, then the Potion restock section.">
 
     <h3>Step 5: loot</h3>
     <p>Open the <strong>Loot</strong> tab. Under <strong>Who picks up what</strong>, set every kind of drop to <strong>Leave on the ground</strong>, <strong>Pickup pet</strong> or <strong>Character</strong>, so the pet and the character can work side by side (see <a href="#pet">Pet loot</a>). The three buttons (Elixirs only, Elixirs + gold, All items) are quick presets. <strong>Always include names</strong> and <strong>Exclude names</strong> take comma-separated words.</p>
-    <img class="shot" src="guide/05-loot.png" width="470" alt="The Loot tab: collector, chime settings, preset buttons, item category checkboxes and name filters.">
+    <img class="shot" loading="lazy" src="guide/05-loot.png" width="470" alt="The Loot tab: collector, chime settings, preset buttons, item category checkboxes and name filters.">
 
     <h3>Step 6: start</h3>
     <p>Press <kbd>F8</kbd>, or <strong>Start / stop</strong>. <strong>Return &amp; hunt</strong> walks back to the saved spot first and then starts. <strong>Stop all</strong> cancels hunting and any trip. If you control your character by hand, the bot pauses for a few seconds and then carries on.</p>
@@ -73,16 +86,16 @@
       <li>Walk to the warehouse, stand a few steps in front of the NPC on open ground, <strong>select the NPC in the game</strong>, then click <strong>Save warehouse</strong>. Do the same for the <strong>repair merchant</strong> and the <strong>world statue / teleport</strong>.</li>
       <li>For the <strong>potion merchant</strong>, open its shop first, then click <strong>Save potion merchant</strong>.</li>
     </ol>
-    <img class="shot" src="guide/08-town-cycle.png" width="470" alt="Town page, Scroll town cycle: the town switches, the Town list with Set up this town, the Auto-set town services button and the five Save buttons, each showing Not saved.">
+    <img class="shot" loading="lazy" src="guide/08-town-cycle.png" width="470" alt="Town page, Scroll town cycle: the town switches, the Town list with Set up this town, the Auto-set town services button and the five Save buttons, each showing Not saved.">
     <p class="note">With manual saves the bot walks to the exact spot you stood on. If a merchant is too far from that spot, the trip stalls on the way there. Standing a few steps in front of the NPC, on open ground, avoids it.</p>
     <h3>Choose what to buy</h3>
     <p>In <strong>Potion restock</strong> tick <strong>Buy HP</strong> and <strong>Buy MP</strong> and set <strong>Low stock</strong> (a trip starts at or below it) and <strong>refill to</strong> (the total you want after shopping, counting what you carry). Town trips buy X-Large HP and MP potions. You can also buy vigor potions in the size you choose, and abnormal pills. Archers can tick <strong>Buy arrows</strong> or <strong>Buy bolts</strong> under <strong>Supplies → Arrows and bolts</strong>: they are bought at the repair merchant on the same trip, and equipping them is up to you.</p>
-    <img class="shot" src="guide/07-restock.png" width="470" alt="Supplies, Potion restock: Buy HP and Buy MP with low-stock and refill amounts, the vigor potion size, and abnormal pills.">
+    <img class="shot" loading="lazy" src="guide/07-restock.png" width="470" alt="Supplies, Potion restock: Buy HP and Buy MP with low-stock and refill amounts, the vigor potion size, and abnormal pills.">
     <h3>Turn it on</h3>
     <p>Tick <strong>Use return scroll → town services → reverse return</strong>, save your hunting spot, and start the bot. The same section lets you deposit gear in the warehouse (see below); returning when the pickup pet is nearly full and reviving in town after dying are under <strong>Go to town when…</strong>. F8 cancels a trip at any time.</p>
     <h3>What starts a trip</h3>
     <p>The top of the <strong>Town</strong> page shows the trip as pictures: return scroll, warehouse, potions, repair and reverse, with what each step still needs. Under <strong>Go to town when…</strong> are the reasons a trip starts. A nearly full bag and low potions always count. You can also send the bot to town when the pickup pet is nearly full, when your <strong>weapon is broken</strong> (on by default), when your <strong>gear is worn</strong> below a percentage, after <strong>no XP for a while</strong>, or <strong>on a timer</strong>. The XP and timer clocks only run while hunting and restart with every trip.</p>
-    <img class="shot" src="guide/08-town-triggers.png" width="470" alt="Town page: the trip as five pictures, then Go to town when… with the pet, broken weapon, worn gear, no XP and timer switches.">
+    <img class="shot" loading="lazy" src="guide/08-town-triggers.png" width="470" alt="Town page: the trip as five pictures, then Go to town when… with the pet, broken weapon, worn gear, no XP and timer switches.">
 
     <h2 id="pet">4. Pet loot</h2>
     <ol>
@@ -102,36 +115,36 @@
     <h2 id="more">5. Optional features</h2>
     <h3>Anti-stuck</h3>
     <p>In <strong>Settings → Anti-stuck</strong>. If nothing is killed, gained or picked up for a few minutes, the bot drops its target, then walks back to the hunting spot, and finally stops. It is on by default.</p>
-    <img class="shot" src="guide/11-anti-stuck.png" width="470" alt="Settings, Anti-stuck: the recovery switch, the minutes without progress and the number of failed recoveries before stopping.">
+    <img class="shot" loading="lazy" src="guide/11-anti-stuck.png" width="470" alt="Settings, Anti-stuck: the recovery switch, the minutes without progress and the number of failed recoveries before stopping.">
     <h3>Party</h3>
     <p>On the <strong>Party</strong> page, tick <strong>Buff and heal party members</strong> to support your party with your own skills: a group heal when enough members are low, a heal on the lowest member, then party buffs on whoever is missing them (each buff can be limited to named members). It only casts on members in view within the support range and never walks to them. The same page has auto-recruit and auto-accept party-matching applicants, accept a resurrection from a party member (and resume hunting afterwards), and resurrect fallen party members yourself. All off by default.</p>
-    <img class="shot" src="guide/13-party.png" width="470" alt="Party page: the party members, heal and buff settings, party buffs, then auto-recruit, listing settings, auto-accept joins, accept resurrection and auto-resurrect.">
+    <img class="shot" loading="lazy" src="guide/13-party.png" width="470" alt="Party page: the party members, heal and buff settings, party buffs, then auto-recruit, listing settings, auto-accept joins, accept resurrection and auto-resurrect.">
     <h3>Auto mastery and skills</h3>
     <p>Spends skill points for you, one confirmed level at a time: tick the masteries you want and the bot raises them in that order up to your level (minus an optional gap). It can also learn the next level of the skills in your rotations and buffs, and it never spends the reserve you set. Off by default.</p>
-    <img class="shot" src="guide/12-mastery.png" width="470" alt="Settings, Auto mastery and skills: the mastery checkboxes, the level gap, the skill upgrade switch, the reserve and the spend order.">
+    <img class="shot" loading="lazy" src="guide/12-mastery.png" width="470" alt="Settings, Auto mastery and skills: the mastery checkboxes, the level gap, the skill upgrade switch, the reserve and the spend order.">
     <h3>Following a party member</h3>
     <p>On the <strong>Party</strong> page, tick <strong>Follow a party member while hunting</strong>, choose the member (the party leader by default) and how close to stay. The bot walks to them whenever they get farther away and hunts around them instead of around your saved spot, so it works like an auto trace. It does not follow into a dungeon or another area, and your saved hunting spot is used again as soon as following is off or the member is unavailable.</p>
-    <img class="shot" src="guide/13b-follow.png" width="470" alt="Party page, Follow a party member: the switch, the member list, the distance and the fight option.">
+    <img class="shot" loading="lazy" src="guide/13b-follow.png" width="470" alt="Party page, Follow a party member: the switch, the member list, the distance and the fight option.">
     <h3>Activity log and session window</h3>
     <p>Under <strong>Settings → Recent activity</strong> the bot keeps a detailed history of what it did, with filters, search, pause and an export you can preview before saving (names and positions are left out unless you tick raw; nothing is uploaded). The <strong>Session</strong> button, or <strong>Pop out session totals and log</strong> in Settings, opens a floating window with your session totals and the same log. It stays on screen when you minimise the bot and closing it does not stop hunting.</p>
     <h3>Stat points</h3>
     <p>Under <strong>Settings → Stat points</strong>, tick <strong>Spend stat points automatically</strong> and the bot spends your unspent points on Strength and Intelligence as you level up, one confirmed point at a time. The two shares are a ratio: 1 and 0 is all Strength, 0 and 1 is all Intelligence, 2 and 1 is two Strength for every Intelligence. <strong>Keep this many points unspent</strong> holds some back. It is off by default.</p>
     <h3>Share and import settings</h3>
     <p>Under <strong>Settings → Share and import settings</strong>, <strong>Copy share code</strong> or <strong>Save share file</strong> gives a short code or file with only the settings you changed from the defaults. It never includes your hunting spot, town points, routes, buff weapon sets or wardrobe, so you can post it in Discord for anyone to use. To load one, paste the code (or open the file) and press <strong>Preview import</strong>: the bot lists what would change, and nothing changes until you press <strong>Apply import</strong>. Your own positions and town points are kept, and <strong>Undo last import</strong> brings your old settings back.</p>
-    <img class="shot" src="guide/10b-share.png" width="470" alt="Settings, Share and import settings: Copy share code and Save share file, the paste box, Open file, Preview import and Undo last import.">
+    <img class="shot" loading="lazy" src="guide/10b-share.png" width="470" alt="Settings, Share and import settings: Copy share code and Save share file, the paste box, Open file, Preview import and Undo last import.">
     <h3>Pet recovery kits and vigor potions</h3>
     <p>Under <strong>Supplies → Automatic potion use</strong> (the potions screenshot above): tick <strong>Use recovery kits on my pets</strong> to heal an attack or pickup pet below the HP you set.</p>
     <h3>Reconnect</h3>
     <p>Always on. After a server restart or a dropped connection the bot waits for the game, reconnects, and resumes hunting if it was hunting. It never types or stores your password; if the login is gone it tells you and waits for you to log in. Logging out yourself cancels it.</p>
     <h3>Item alchemy</h3>
     <p>The <strong>Alchemy</strong> tab enhances one item from your bag with elixirs: a weapon, shield, armour piece or accessory, each with its own kind of elixir. Failed attempts can lower, damage or destroy the item, so set a sensible <strong>Target +</strong> and attempt limit and stop hunting first. Under the settings the tab shows the chance of the next attempt and how many elixirs you should expect to need, taken from the server's own data, and a <strong>Results</strong> panel keeps count and a log.</p>
-    <img class="shot" src="guide/09-alchemy.png" width="470" alt="The Alchemy tab: item choice, target plus, attempts, elixir choice, lucky powder from a plus, and the start and stop buttons.">
+    <img class="shot" loading="lazy" src="guide/09-alchemy.png" width="470" alt="The Alchemy tab: item choice, target plus, attempts, elixir choice, lucky powder from a plus, and the start and stop buttons.">
     <p>Under <strong>Stones that help and protect</strong> tick <strong>Use Luck / Steady / Immortal / Astral stones while enhancing</strong> for the helpers you want, set how many charges to keep on the item (1 to 6) and the plus each is used <strong>from</strong>. Luck raises the enhancement success chance, Steady stops durability damage, Immortal stops destruction when an enhancement fails from +5, and Astral keeps +4 instead of resetting to 0. The stones must be of the item's degree and in your bag; when the item has fewer charges than you asked to keep, one is fused automatically before every attempt at or above its plus. <strong>Fuse stones now</strong> ignores the plus and only fills the charges.</p>
-    <img class="shot" src="guide/09b-alchemy-stones.png" width="470" alt="The Alchemy tab, Stones that help and protect: Luck, Steady, Immortal and Astral counts, the plus each is used from, and the Fuse stones now button.">
+    <img class="shot" loading="lazy" src="guide/09b-alchemy-stones.png" width="470" alt="The Alchemy tab, Stones that help and protect: Luck, Steady, Immortal and Astral counts, the plus each is used from, and the Fuse stones now button.">
 
     <h3>Item attributes</h3>
     <p>Under <strong>Item attributes (stat percentages)</strong> pick, for the item selected at the top, the lowest percentage you want for each stat. Press <strong>Fuse attribute stones</strong> and the bot fuses attribute stones of the item's degree until every picked stat reaches its target. A successful fusion rolls the stat again, so it can come out lower, and it can re-roll another stat of the item, so the bot keeps checking all of them. The chance is 50% per stone before bonuses and the 80% and 100% steps are rare, so keep the stone limit (100 by default) sensible. It stops if a stone of the right kind is missing from the bag.</p>
-    <img class="shot" src="guide/09c-alchemy-attributes.png" width="470" alt="The Alchemy tab, Item attributes: each stat of the item with its current percentage and a target, the stone limit and the Fuse attribute stones button.">
+    <img class="shot" loading="lazy" src="guide/09c-alchemy-attributes.png" width="470" alt="The Alchemy tab, Item attributes: each stat of the item with its current percentage and a target, the stone limit and the Fuse attribute stones button.">
 
     <h2 id="problems">6. If something goes wrong</h2>
     <p>The status line at the top of the panel says what the bot is waiting for. The common messages:</p>
@@ -151,9 +164,18 @@
     </table>
     <p>Questions, suggestions and bug reports are welcome on <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a>. The <strong>Discord</strong> button at the top of the bot panel opens the same invite, and patch notes are posted there.</p>
     <p>Still stuck? Use <strong>Settings → Send bug report</strong>. It opens a window with a diagnostics preview (no names, chat or locations), an optional note and screenshot, and nothing is sent until you press <strong>Send to developer</strong>. You can also <a href="https://github.com/nixxane/opensro-bot-lean/issues">open an issue</a>.</p>
-    <img class="shot" src="guide/14-bug-report.png" width="470" alt="The bug report window floating over the game next to the bot panel, with the diagnostics preview, an explanation box and Send to developer.">
+    <img class="shot" loading="lazy" src="guide/14-bug-report.png" width="470" alt="The bug report window floating over the game next to the bot panel, with the diagnostics preview, an explanation box and Send to developer.">
 
-    <footer><a href="./">Home</a><a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a><a href="./#patch-notes">Patch notes</a><a href="https://github.com/nixxane/opensro-bot-lean#readme">README</a><a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a></footer>
-  </main>
+
+    </main>
+  </div>
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span class="brand"><img src="./favicon.svg?v=1.2.40" width="22" height="22" alt="">NIX</span>
+      <nav aria-label="Footer">
+        <a href="./guide.html">Guide</a><a href="./notes.html">Patch notes</a><a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a><a href="https://github.com/nixxane/opensro-bot-lean#readme">README</a><a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a><a href="https://github.com/nixxane/opensro-bot-lean/blob/main/LICENSE">MIT licence</a><a href="https://github.com/nixxane/opensro-bot-lean/issues">Report an issue</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
