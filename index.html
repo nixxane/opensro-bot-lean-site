@@ -1,93 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Install NIX, a compact Tampermonkey bot for OpenSRO.">
-  <title>NIX · OpenSRO bot</title>
-  <link rel="icon" href="./favicon.svg?v=1.2.40" type="image/svg+xml">
-  <script>document.documentElement.classList.add('js')</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="./hero.js" defer></script>
-  <script src="./site.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Install NIX, a compact Tampermonkey bot for OpenSRO.">
+<title>NIX · OpenSRO bot</title>
+<link rel="icon" href="./favicon.svg?v=1.2.40" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
 </head>
-<body class="page-home">
-  <header class="nav">
-    <a class="brand" href="./"><img src="./favicon.svg?v=1.2.40" width="28" height="28" alt="">NIX</a>
-    <nav aria-label="Main">
-      <a href="./guide.html" data-nav="guide">Guide</a>
-      <a href="./notes.html" data-nav="notes">Patch notes</a>
-      <a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a>
-      <a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a>
-    </nav>
-    <a class="btn btn-sm" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install</a>
-  </header>
-  <section class="hero">
-    <canvas id="scene" aria-hidden="true"></canvas>
-    <div class="wrap hero-in">
-      <p class="pill"><span class="dot-live"></span><a id="release" href="https://github.com/nixxane/opensro-bot-lean/commits/main/">Latest version</a></p>
-      <h1>The OpenSRO bot that does the <em>boring parts</em>.</h1>
-      <p class="lead">Combat, potions, pet loot and town trips, in one compact Tampermonkey script. Set your spot, pick your skills, press <kbd>F8</kbd>.</p>
-      <p class="cta"><a class="btn" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install / update bot</a><a class="btn ghost" href="./guide.html">Read the guide</a><a class="btn ghost" href="https://discord.gg/Y5H5ZyfQ7u">Join Discord</a></p>
-    </div>
-    <a class="scroll-hint" href="#preview" aria-label="Scroll down">↓</a>
-  </section>
-  <main>
-    <section id="preview" class="wrap section">
-      <figure class="shot-tilt reveal">
-        <img src="guide/16-classic-skills.png" width="860" height="729" alt="NIX in the Classic window: a menu bar, HP, MP and EXP bars with the bot status, Start / stop, Return &amp; hunt and Stop all, the tabs down the left, the Skills tab's attack rotation in the middle, and session numbers and supplies on the right.">
-        <figcaption>NIX in the Classic window, laid out like SBot. Compact and Wide windows are one click away.</figcaption>
-      </figure>
-    </section>
+<body>
+<header>
+<a href="./"><b>NIX</b></a> |
+<a href="./guide.html">guide</a> |
+<a href="./notes.html">patch notes</a> |
+<a href="https://discord.gg/Y5H5ZyfQ7u">discord</a> |
+<a href="https://github.com/nixxane/opensro-bot-lean">github</a>
+</header>
+<main>
+<h1>NIX</h1>
+<p>A compact OpenSRO bot for combat, potions, pet loot and town trips.</p>
+<p><a href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js"><b>Install / update</b></a> (needs <a href="https://www.tampermonkey.net/">Tampermonkey</a>)<br>
+<a href="https://github.com/nixxane/opensro-bot-lean/commits/main/">Latest version</a> | <a href="./guide.html">Setup guide</a> | <a href="./notes.html">Patch notes</a></p>
 
-    <section class="wrap section">
-      <p class="eyebrow reveal">What it does</p>
-      <h2 class="reveal">Everything between "start" and "stop".</h2>
-      <div class="cards">
-        <article class="card reveal"><span class="ico">⚔️</span><h3>Combat</h3><p>Attack skills, buffs and weapon imbue around a saved hunting spot.</p></article>
-        <article class="card reveal"><span class="ico">🧪</span><h3>Potions</h3><p>HP, MP and vigor thresholds, cure pills and pet recovery kits.</p></article>
-        <article class="card reveal"><span class="ico">🐾</span><h3>Pet loot</h3><p>Your pet collects drops while you fight, by your own filters.</p></article>
-        <article class="card reveal"><span class="ico">🏙️</span><h3>Town trips</h3><p>Sell, repair, restock and reverse-scroll back to the hunt.</p></article>
-        <article class="card reveal"><span class="ico">🛡️</span><h3>Party</h3><p>Heal and buff party members, recruit and follow.</p></article>
-        <article class="card reveal"><span class="ico">🔌</span><h3>Reconnect</h3><p>Gets back into the game after a disconnect and hunts on.</p></article>
-      </div>
-    </section>
+<img src="guide/16-classic-skills.png" width="860" height="729" alt="NIX in the Classic window: a menu bar, HP, MP and EXP bars with the bot status, Start / stop, Return &amp; hunt and Stop all, the tabs down the left, the Skills tab's attack rotation in the middle, and session numbers and supplies on the right.">
 
-    <section class="wrap section">
-      <p class="eyebrow reveal">Quick setup</p>
-      <h2 class="reveal">Three steps. Really.</h2>
-      <ol class="steps">
-        <li class="reveal"><span class="num">1</span><h3>Get Tampermonkey</h3><p>Install <a href="https://www.tampermonkey.net/">Tampermonkey</a> in your browser.</p></li>
-        <li class="reveal"><span class="num">2</span><h3>Install NIX</h3><p>Install the bot, disable other OpenSRO bot scripts, then reload the game.</p><p><a class="btn btn-sm" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install / update bot</a></p></li>
-        <li class="reveal"><span class="num">3</span><h3>Set spot, press F8</h3><p>Save your hunting spot, choose skills, set loot and potions, then hit <kbd>F8</kbd>.</p></li>
-      </ol>
-      <p class="keys reveal"><span><kbd>F8</kbd> Start / stop</span><span><kbd>F7</kbd> Fold</span><span><kbd>Shift</kbd>+<kbd>F7</kbd> Hide / show</span><span><kbd>F6</kbd> or <kbd>×</kbd> Minimise / restore</span></p>
-    </section>
+<h2>Features</h2>
+<ul>
+<li><b>Combat</b>: attack skills, buffs and weapon imbue around a saved hunting spot.</li>
+<li><b>Potions</b>: HP, MP and vigor thresholds, cure pills and pet recovery kits.</li>
+<li><b>Pet loot</b>: your pet collects drops while you fight, by your own filters.</li>
+<li><b>Town trips</b>: sell, repair, restock and reverse-scroll back to the hunt.</li>
+<li><b>Party</b>: heal and buff party members, recruit and follow.</li>
+<li><b>Reconnect</b>: gets back into the game after a disconnect and hunts on.</li>
+</ul>
 
-    <section class="wrap section">
-      <p class="eyebrow reveal">Fresh off the press</p>
-      <h2 class="reveal">Latest patch notes</h2>
-      <div id="latest" class="latest"><p class="muted">Loading…</p></div>
-      <p class="reveal"><a class="btn ghost" href="./notes.html">All patch notes →</a></p>
-    </section>
-
-    <section class="wrap section">
-      <div class="cta-band reveal">
-        <h2>Ready to stop babysitting your character?</h2>
-        <p class="cta"><a class="btn" href="https://raw.githubusercontent.com/nixxane/opensro-bot-lean/main/bot.lean.user.js">Install / update bot</a><a class="btn ghost" href="https://discord.gg/Y5H5ZyfQ7u">Ask on Discord</a></p>
-      </div>
-    </section>
-  </main>
-  <footer class="foot">
-    <div class="wrap foot-in">
-      <span class="brand"><img src="./favicon.svg?v=1.2.40" width="22" height="22" alt="">NIX</span>
-      <nav aria-label="Footer">
-        <a href="./guide.html">Guide</a><a href="./notes.html">Patch notes</a><a href="https://discord.gg/Y5H5ZyfQ7u">Discord</a><a href="https://github.com/nixxane/opensro-bot-lean#readme">README</a><a href="https://github.com/nixxane/opensro-bot-lean">GitHub</a><a href="https://github.com/nixxane/opensro-bot-lean/blob/main/LICENSE">MIT licence</a><a href="https://github.com/nixxane/opensro-bot-lean/issues">Report an issue</a>
-      </nav>
-    </div>
-  </footer>
+<h2>Setup</h2>
+<ol>
+<li>Install Tampermonkey in your browser.</li>
+<li>Install the bot, disable other OpenSRO bot scripts, then reload the game.</li>
+<li>Save your hunting spot, choose skills, set loot and potions, press <kbd>F8</kbd>.</li>
+</ol>
+<p><kbd>F8</kbd> start / stop | <kbd>F7</kbd> fold | <kbd>Shift+F7</kbd> hide / show | <kbd>F6</kbd> or <kbd>×</kbd> minimise / restore</p>
+</main>
+<footer>
+<a href="https://github.com/nixxane/opensro-bot-lean#readme">README</a> |
+<a href="https://github.com/nixxane/opensro-bot-lean/blob/main/LICENSE">MIT licence</a> |
+<a href="https://github.com/nixxane/opensro-bot-lean/issues">report an issue</a>
+</footer>
 </body>
 </html>
