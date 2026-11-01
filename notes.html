@@ -21,6 +21,14 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/79506f6">1.2.211</a> &middot; Sell Star: withdrawals and walking fixed</h3>
+        <ul>
+          <li>Fixes Sell all Star gear stopping with &ldquo;a withdrawal did not reach the bag&rdquo;. It now waits for the gear to show up in the bag, in whatever slot the game puts it.</li>
+          <li>It no longer insists on reaching the exact saved standing spot: close enough to the warehouse or merchant is enough, and if it cannot find a way it tries from where it stands.</li>
+          <li>Tested in simulation only.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/968a210">1.2.210</a> &middot; Sell Star also sells Star gear already in the bag</h3>
         <ul>
           <li>Fixes Sell all Star gear doing nothing when Star gear from an earlier run was still in your bag. Star gear in the bag is now sold along with what comes out of the warehouse.</li>
