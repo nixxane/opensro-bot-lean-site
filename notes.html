@@ -21,6 +21,14 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/179512e">1.2.202</a> &middot; Bug reports say why the bot stopped</h3>
+        <ul>
+          <li>A bug report now lists the last reasons the bot stopped by itself (for example a town trip that timed out), how long ago, and whether you stopped it last.</li>
+          <li>Before, a stopped bot only said "Bot stopped.", so reports of the bot doing nothing after a town trip could not say what ended the run. Nothing about hunting or travelling changes.</li>
+          <li>Tested in simulation only.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/96b5836">1.2.199</a> &middot; Auto quest: pick quests from a list</h3>
         <ul>
           <li>The Quest page now has a list of quests to tick, like phBot, with each quest's level and name. It comes from the game's own quest data (about 140 quests whose NPC the data names).</li>
