@@ -21,6 +21,16 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/96b5836">1.2.199</a> &middot; Auto quest: pick quests from a list</h3>
+        <ul>
+          <li>The Quest page now has a list of quests to tick, like phBot, with each quest's level and name. It comes from the game's own quest data (about 140 quests whose NPC the data names).</li>
+          <li>Ticked quests are done lowest level first: the bot walks to the quest NPC (it can cross regions, outdoors), takes the quest, hunts what the quest counts and turns it in. Quests above your level wait.</li>
+          <li>Quest codenames now come from the data, so the right dialogue row is picked without learning it first. The journal's own target list is hunted first.</li>
+          <li>With nothing ticked it still follows the quest markers the game shows.</li>
+          <li>Tested in simulation and against the game data files only. Monster spawns are not in the client, so the bot hunts where your hunting area already is.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/dd16e92">1.2.198</a> &middot; Auto quest says what it is waiting for</h3>
         <ul>
           <li>When Start quests is on but nothing happens, the Quest page now says why: no quest markers, no NPC offering a quest, an NPC in another region, quests excluded by your lists, or what it is waiting on. The same reason goes to the log.</li>
