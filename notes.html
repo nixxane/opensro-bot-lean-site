@@ -21,6 +21,14 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/78f86c8">1.2.203</a> &middot; Anti-stuck can go to town</h3>
+        <ul>
+          <li>New option under Settings &rsaquo; Anti-stuck: Go to town instead of stopping. When the bot makes no progress after all its recoveries, it makes a town trip instead of stopping.</li>
+          <li>The trip ends in town and does not return to the spot where nothing worked. It needs the town cycle to be on, and it is off by default, so nothing changes unless you turn it on.</li>
+          <li>Tested in simulation only.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/179512e">1.2.202</a> &middot; Bug reports say why the bot stopped</h3>
         <ul>
           <li>A bug report now lists the last reasons the bot stopped by itself (for example a town trip that timed out), how long ago, and whether you stopped it last.</li>
