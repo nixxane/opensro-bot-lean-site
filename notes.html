@@ -21,6 +21,14 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/968a210">1.2.210</a> &middot; Sell Star also sells Star gear already in the bag</h3>
+        <ul>
+          <li>Fixes Sell all Star gear doing nothing when Star gear from an earlier run was still in your bag. Star gear in the bag is now sold along with what comes out of the warehouse.</li>
+          <li>When it stops, the reason now shows in the bug report (Diagnostics), so a failed run can be diagnosed.</li>
+          <li>Tested in simulation only.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/d710dfa">1.2.209</a> &middot; Sell Star walks to the warehouse and merchant</h3>
         <ul>
           <li>Fixes the Sell all Star gear button taking the gear out and then not selling it. It now walks to the saved warehouse and then to the saved repair merchant itself, instead of needing you to stand in reach of both.</li>
