@@ -21,6 +21,28 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/0b23461">1.2.189</a> &middot; Auto Quest: quests done for you</h3>
+        <ul>
+          <li>New Quest page with "Do quests automatically" (Auto quests group). The bot follows the quest markers the game shows, walks to the quest NPC, accepts the quest, hunts the monsters that count, and turns it in.</li>
+          <li>"Accept quests their NPC offers", "Only quests named" and "Never quests named" let you limit which quests it takes. Which dialogue answer belongs to which quest, and which monsters count, are learned while you play.</li>
+          <li>Quests that can be closed from the reward window are rewarded without walking. If the reward is refused, the bot waits a minute before trying again, then goes to the NPC. A quest it cannot identify is never answered by guessing.</li>
+          <li>The quest journal on the same page shows each quest's count, with Skip/Unskip and Abandon (click twice to confirm). It also tells you when the targets are not around.</li>
+          <li>Your hunt area is not moved for you. Gathering, capture traps and travelling to a quest's monster spawn are not automated.</li>
+          <li>Thanks to duan78 (#75). Tested in simulation only, not in a live game. The NPC talk and reward commands were not checked against the live server.</li>
+        </ul>
+      </article>
+      <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/e9479c4">1.2.188</a> &middot; Item Mall supplies and battle scrolls</h3>
+        <ul>
+          <li>New options on the Supplies page, all off by default. The bot can buy potion bags (HP and MP) from the Item Mall when your stock runs low.</li>
+          <li>Mall buying uses a silk budget per bot run. At 0 it never buys. Merchant town trips stay the main supply, and nothing is ordered during town trips, restocks or open shops.</li>
+          <li>If the mall refuses an item, the bot waits a minute before trying it again. If an order is never confirmed, mall buying stops until the mall answers again or you re-enter the world.</li>
+          <li>The bot can keep the 20% damage and 20% resistance scrolls active, using one from your bag whenever the 30-minute buff runs out. Their packs can also be bought from the mall under the same budget.</li>
+          <li>Reverse Return Scrolls are a new gold restock item at the merchant. If the merchant does not sell them, the bot skips them with a notice.</li>
+          <li>Thanks to duan78 (#74). Tested in simulation only, not in a live game. Only reading the mall catalogue was checked on the live server. Buying with real silk has not been tried.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/commit/825e37a">1.2.187</a> &middot; Attack pet joins your fights</h3>
         <ul>
           <li>New "Attack pet" group on the Combat page, under Hunt area. It is off by default: turn on "Attack pet assists my targets".</li>
