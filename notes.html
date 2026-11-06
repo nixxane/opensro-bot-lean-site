@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.225">1.2.225</a> &middot; Town trips wait when the warehouse will not open</h3>
+        <ul>
+          <li>If the warehouse, a merchant or the world statue does not open, for example because the town is still loading, the bot no longer stops. It waits a minute, walks back and tries again.</li>
+          <li>Each service gets three tries per trip. If the third one fails too, the bot stops with the same message as before.</li>
+          <li>No new option.</li>
+          <li>From a player report. Tested in simulation only; a slow-loading town is the likely cause, not a confirmed one.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.219">1.2.219</a> &middot; Town trips no longer stop at the smith after a skipped supply</h3>
         <ul>
           <li>Fixes the character standing still at the repair merchant at the end of a town trip with &ldquo;Final supply, repair or travel-scroll check failed&rdquo;.</li>
