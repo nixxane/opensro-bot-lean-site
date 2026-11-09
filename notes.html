@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.233">1.2.233</a> &middot; Leveling buys the right gear, and town trips skip idle stops</h3>
+        <ul>
+          <li>Leveling now reads your character's sex from the character itself, so it no longer buys armour for the other sex ("Cannot equip because of different sex"). If it cannot tell, it only buys gear either sex can wear.</li>
+          <li>Leveling goes to town for gear only for a real upgrade over what you wear. Empty slots (a helmet, rings) are filled on trips that happen anyway: a level 2 character no longer goes to town for level 1 gear.</li>
+          <li>Every town trip now skips a stop with nothing to do: no warehouse visit without anything to store, no potion merchant when potions and return scrolls are full, no blacksmith without something to sell, buy or mend.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.232">1.2.232</a> &middot; Leveling finds spots for new characters</h3>
         <ul>
           <li>Zero-setup leveling now knows many more hunting spots, including the thinly spread first-level monsters around each town (Mangnyangs near Jangan, for example). There were none for level 1 before, so a new character stayed on its saved spot.</li>
