@@ -21,6 +21,14 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.241">1.2.241</a> &middot; A blocked town merchant tries another spot</h3>
+        <ul>
+          <li>"Town cycle stopped: Blocked on the way to the repair merchant" with nothing in the way: the saved standing point beside a merchant can be a place the first trip never checked (inside a forge or a fence). The trip now tries other spots around the merchant, nearest to the way in first, before giving up. A spot that works replaces the saved one.</li>
+          <li>If every spot fails, behaviour is as before: the warehouse is skipped, other services stop the trip.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.240">1.2.240</a> &middot; Faster route check on repeat trips, clearer leveling gear buying</h3>
         <ul>
           <li>The route check now remembers every stretch that walked, so after the first trip to a spot the way back no longer waits for it. While the character only waits for the check, it also runs faster.</li>
