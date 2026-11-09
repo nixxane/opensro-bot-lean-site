@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.244">1.2.244</a> &middot; Leveling replaces Seal gear too</h3>
+        <ul>
+          <li>With Level up by itself on, Seal (SOX) and other rare pieces were never replaced, so a Seal blade, sword or a level 1 Seal necklace stayed on for good while ordinary pieces were upgraded. They are now replaced like any other piece when the town sells a higher level. The Seal piece goes to your bag and is never sold.</li>
+          <li>Gear above +3 and gear you protect are still never replaced.</li>
+          <li>If the walk to a picked hunting spot fails five times in a row, the bot stops trying new spots instead of wandering the map. Reaching a spot resets the count.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.243">1.2.243</a> &middot; Leveling: a rescued merchant trip keeps going, and unreachable spots are skipped</h3>
         <ul>
           <li>When a merchant's standing spot was blocked and the bot found another one that worked, the trip ended a moment later with "Settings or character changed". It now carries on and the working spot is kept.</li>
