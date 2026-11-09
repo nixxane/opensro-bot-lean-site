@@ -21,6 +21,16 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.247">1.2.247</a> &middot; Spots across the river take the ferry</h3>
+        <ul>
+          <li>A hunting spot across the river from Jangan (level 21 and up) made the bot check a walking route north into the Water Ghost Marshland, where there is no way across. The route data for one area can hold both banks of a river, and the bot took that to mean it could walk there. It now measures the real walk on the route data from both ends. When a spot cannot be reached on foot, or only the long way round, it takes the ferry: from Jangan, the China East Ferry to the far bank.</li>
+          <li>This is decided before the slow route check, so the character no longer stands waiting for a walk that would never work.</li>
+          <li>A ferry or teleport fee now counts for more when choosing the way, so the bot prefers a 500 gold ferry over a 5000 gold statue teleport. It pays that fee on every town trip.</li>
+          <li>Auto trade keeps walking as before (no teleport or ferry takes a trade transport).</li>
+          <li>Tested in simulation with the game&#39;s real route data, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.246">1.2.246</a> &middot; Leveling moves on to the next town</h3>
         <ul>
           <li>With Level up by itself on, a character no longer stays in its first town forever. Once that town sells nothing better and the next town&#39;s gear is open (Jangan&#39;s ends at level 21, Donwhang&#39;s next tier opens at 24), it walks to the next town&#39;s world statue, makes it the return point, and sets up its warehouse, merchants and statue there. From then on its town trips, hunting spots and gear come from the new town: Jangan, then Donwhang, then Hotan.</li>
