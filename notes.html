@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.235">1.2.235</a> &middot; Leveling picks better spots, raises the elements and uses an imbue</h3>
+        <ul>
+          <li>A leveling character no longer stays on a low-level spot beside the town. The bot now looks up to four times the "Spots at most this far from town" distance (at most 5 km) before settling for a spot far below your level. At level 5 near Jangan it now takes the level 5 spot, not the level 2 one.</li>
+          <li>Zero-setup leveling also raises the Cold, Lightning and Fire masteries after the weapon's mastery (skipped when the character has none), and their new skills join the rotation. A list you chose yourself is left alone.</li>
+          <li>A learned weapon imbue skill is put in the empty imbue slot once. Taking it out by hand keeps it out.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.234">1.2.234</a> &middot; Leveling always walks back</h3>
         <ul>
           <li>With Level up by itself on, the character now walks back to its hunting spot after a death or a town trip. It no longer uses or buys Reverse Return Scrolls: leveling spots are only a short walk from town.</li>
