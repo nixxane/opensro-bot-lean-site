@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.229">1.2.229</a> &middot; Zero-setup leveling</h3>
+        <ul>
+          <li>New on the Setup page: <strong>Level up by itself</strong>. The bot picks a hunting spot for your level from the game's monster spawn data, near your town, and moves to a better one as you level.</li>
+          <li>On town trips it buys the next tier of NPC weapon, armour and (optionally) accessories, wears them in the shop and sells the old pieces back. Seal gear, rare items, +4 and higher, and anything you protect are never replaced. A gold reserve (5,000 by default) is never spent.</li>
+          <li>When better gear becomes affordable, the bot goes to town for it by itself, once.</li>
+          <li>Off by default. Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.228">1.2.228</a> &middot; Max every skill is now a switch</h3>
         <ul>
           <li>"Max every skill" (Settings, Auto mastery) is now an on/off switch instead of a one-time button. While it is on, it learns and upgrades every skill it is allowed to, then stays on and spends new skill points as you get them (after a level up, for example). Turn it off to stop.</li>
