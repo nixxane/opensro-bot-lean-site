@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.248">1.2.248</a> &middot; Leveling reaches Donwhang, and the pet collects the drops</h3>
+        <ul>
+          <li>The move to the next town never got there: its walk from Jangan to Donwhang tried to cross the river on foot, failed, and the bot then left Donwhang alone for the session. A character past level 24 kept hunting around Jangan, sometimes at a spot with no monsters. The move now uses the world statue&#39;s teleport (Jangan to Donwhang, later Donwhang to Hotan), then makes the new town the return point as before.</li>
+          <li>Any walk the bot makes between places (not only the way to the hunting spot) now takes a ferry or teleport when one is needed. Auto trade still walks.</li>
+          <li>With Level up by itself on and a pickup pet summoned, the pet now collects the drops, gold and gear included, instead of the character running for them. This happens once per character, and only when pickup was still on its default. If you switch it back by hand, it stays.</li>
+          <li>Tested in simulation with the game&#39;s real route data, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.247">1.2.247</a> &middot; Spots across the river take the ferry</h3>
         <ul>
           <li>A hunting spot across the river from Jangan (level 21 and up) made the bot check a walking route north into the Water Ghost Marshland, where there is no way across. The route data for one area can hold both banks of a river, and the bot took that to mean it could walk there. It now measures the real walk on the route data from both ends. When a spot cannot be reached on foot, or only the long way round, it takes the ferry: from Jangan, the China East Ferry to the far bank.</li>
