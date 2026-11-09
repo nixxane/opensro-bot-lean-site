@@ -21,6 +21,14 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.238">1.2.238</a> &middot; Fixes a leveling stop in town</h3>
+        <ul>
+          <li>Fixed "Bot stopped: Cannot read properties of null (reading 'npc')". With Level up by itself on, a town trip where every stop had nothing to do (nothing to sell, buy, repair or store) went to a stop that does not exist. It now goes straight on to the walk back.</li>
+          <li>Reverted 1.2.237's 20 second limit on the route check. The shortened check made the character walk in legs, which got stuck in town ("no walkable route to the hunting spot"). The route is checked against the game map in full again, as before, and the walk waits for it.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.237">1.2.237</a> &middot; Leveling starts walking back sooner</h3>
         <ul>
           <li>After a town trip, "Walking to the hunting spot: loading route data" could keep a leveling character standing still for up to two and a half minutes while the route was checked against the game map. With Level up by itself on, it now waits at most 20 seconds, then walks in legs as it does when no route data is available.</li>
