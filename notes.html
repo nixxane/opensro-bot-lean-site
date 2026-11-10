@@ -21,6 +21,13 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.251">1.2.251</a> &middot; Leveling moves to Donwhang when started in Jangan, or after a death</h3>
+        <ul>
+          <li>With the character in Jangan (recalled by hand, or revived there after a death), starting the bot did the town services and then walked back to the old Jangan hunting spot, even when Donwhang was due (level 24 for Chinese characters). The move to Donwhang only rode on trips started in the field. Now any town trip carries it: after the services in Jangan, the bot takes the world statue teleport to Donwhang, makes Donwhang the return point, shops there and hunts there.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.250">1.2.250</a> &middot; Leveling really moves to Donwhang: return point, shopping and spots there</h3>
         <ul>
           <li>The move to the next town never set the return point. The bot reached the Donwhang world statue but sent the request without opening the statue&#39;s menu, and the game ignores it then. The move counted as failed, so the return point stayed in Jangan: every death and town trip landed in Jangan and walked all the way back. The bot now opens the statue&#39;s menu first, then sets the return point.</li>
