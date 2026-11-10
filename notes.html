@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.253">1.2.253</a> &middot; Leveling makes Donwhang the return point before hunting there</h3>
+        <ul>
+          <li>A Jangan character could teleport to Donwhang and hunt there with the return point still in Jangan. When Jangan had no hunting spot near the character&#39;s level, the bot picked a Donwhang spot and simply travelled to it, skipping the move. Every death and return scroll then went back to Jangan.</li>
+          <li>Now a hunting spot near another town always starts the move first: the bot goes to that town&#39;s world statue, makes it the return point, and only hunts there once the game confirms it. With &quot;Move to the next town&quot; off, it never hunts around another town.</li>
+          <li>A move that fails no longer gives up on that town for the whole session. The log says the return point is unchanged, and the bot tries again after 10 minutes.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.252">1.2.252</a> &middot; Leveling uses the town the character is really in</h3>
         <ul>
           <li>A character whose bot town was saved as Donwhang while the game&#39;s return point was still Jangan (for example, leveling was switched on while hunting near Donwhang) walked from Jangan all the way to the Donwhang warehouse on every trip. The move to Donwhang never came either, because the bot thought it already lived there.</li>
