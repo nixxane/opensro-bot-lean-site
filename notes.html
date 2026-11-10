@@ -21,6 +21,15 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.252">1.2.252</a> &middot; Leveling uses the town the character is really in</h3>
+        <ul>
+          <li>A character whose bot town was saved as Donwhang while the game&#39;s return point was still Jangan (for example, leveling was switched on while hunting near Donwhang) walked from Jangan all the way to the Donwhang warehouse on every trip. The move to Donwhang never came either, because the bot thought it already lived there.</li>
+          <li>With Level up by itself on, the town services now follow the town the character is really in: the town it stands in when the bot starts or after a revive, and the town its return scroll lands in. Starting the bot in Jangan uses the Jangan warehouse and merchants. Once Donwhang is due (level 24 for Chinese characters), the trip goes on to Donwhang by the statue teleport and makes it the return point.</li>
+          <li>Without Level up by itself, the saved town is never changed.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.251">1.2.251</a> &middot; Leveling moves to Donwhang when started in Jangan, or after a death</h3>
         <ul>
           <li>With the character in Jangan (recalled by hand, or revived there after a death), starting the bot did the town services and then walked back to the old Jangan hunting spot, even when Donwhang was due (level 24 for Chinese characters). The move to Donwhang only rode on trips started in the field. Now any town trip carries it: after the services in Jangan, the bot takes the world statue teleport to Donwhang, makes Donwhang the return point, shops there and hunts there.</li>
