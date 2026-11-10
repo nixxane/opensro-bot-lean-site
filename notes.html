@@ -21,6 +21,16 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.255">1.2.255</a> &middot; Leveling keeps the weapon type your character started with</h3>
+        <ul>
+          <li>A blade character could end up buying swords. Auto-equip treated every weapon as the same kind, so a dropped sword with better stats replaced the blade, and leveling then bought the next sword at every tier.</li>
+          <li>With Level up by itself on, the bot now remembers the weapon type your character had when leveling first saw it (a new character&#39;s starting weapon) and keeps buying that type. If it holds another type, the next town trip buys the right one back. Choosing a build in &quot;Character build&quot; still decides the weapon instead.</li>
+          <li>Auto-equip now only swaps a weapon for one of the same type.</li>
+          <li>A character that already switched type is remembered with the weapon it holds now. If that is wrong, pick a build with the right weapon in &quot;Character build&quot;.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.254">1.2.254</a> &middot; Leveling never uses wall skills, and you can pick a character build</h3>
         <ul>
           <li>Zero-setup leveling no longer uses Crystal Wall and Fire Wall (they keep the character from moving). Teleports, dashes, hides, traps, auras and transforms are left out too.</li>
