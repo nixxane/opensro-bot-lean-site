@@ -21,6 +21,16 @@
 <section id="patch-notes">
             <p class="notes-intro">Install the latest script, then reload the game. Reporting-service fixes apply automatically.</p>
       <article class="release">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.250">1.2.250</a> &middot; Leveling really moves to Donwhang: return point, shopping and spots there</h3>
+        <ul>
+          <li>The move to the next town never set the return point. The bot reached the Donwhang world statue but sent the request without opening the statue&#39;s menu, and the game ignores it then. The move counted as failed, so the return point stayed in Jangan: every death and town trip landed in Jangan and walked all the way back. The bot now opens the statue&#39;s menu first, then sets the return point.</li>
+          <li>The move now starts as a town trip: the return scroll takes the character to Jangan, the services run there, then it takes the world statue teleport (or the ferry when that is cheaper) to Donwhang and makes Donwhang the return point.</li>
+          <li>Right after the move, the bot does a first town trip in Donwhang: it buys the potions and the next gear there, then walks to a Donwhang hunting spot. From then on every trip goes to Donwhang. The same happens later from Donwhang to Hotan.</li>
+          <li>Hunting spots now stay near the town of the return point. Before, a Jangan character at level 18 to 23 often walked to spots near Donwhang, far from where it revives. It only uses another town&#39;s spots when its own has nothing near its level.</li>
+          <li>Tested in simulation only, not in a live game.</li>
+        </ul>
+      </article>
+      <article class="release">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.249">1.2.249</a> &middot; A completely full bag goes to the warehouse instead of stopping the trip</h3>
         <ul>
           <li>A character whose bag had filled up all the way (no free slot) used to arrive in town and stop there with &quot;free a character bag slot&quot;, even when the warehouse could take things out of its bag. With &quot;Sell items from the character bag&quot; off, that happened on almost every late trip. The warehouse now goes first and makes the room, and the trip carries on.</li>
