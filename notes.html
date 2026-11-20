@@ -123,10 +123,21 @@
             <input id="release-search" type="search" placeholder="Search a version, feature or message…" autocomplete="off" aria-label="Search releases" data-release-search>
             <button class="search__clear" type="button" data-search-clear hidden aria-label="Clear search"><svg class="icon"><use href="#i-close"/></svg></button>
           </div>
-          <span class="release-count" data-release-count aria-live="polite">177 releases</span>
+          <span class="release-count" data-release-count aria-live="polite">178 releases</span>
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-276">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.276">1.2.276</a> &middot; Optional auto-login after a server restart</h3>
+        <ul>
+          <li>New setting under Behaviour: &ldquo;Log in again by itself after a server restart&rdquo;. Off by default.</li>
+          <li>While it is on, the bot remembers the ID, password and server of your next login on the game&rsquo;s login screen. When a disconnect ends with you signed out, it logs in again, enters the same character and carries on hunting.</li>
+          <li>Turned on while already in game? Log out and log in once so it can remember the login.</li>
+          <li>The login is kept unencrypted in this browser&rsquo;s storage for the site; anyone using the same browser profile can read it. Turning the setting off forgets it. It never goes into logs, diagnostics, reports or shared profiles.</li>
+          <li>If the server refuses the login three times it stops and waits for you; a server that is still restarting is tried again every few minutes.</li>
+          <li>Tested in simulation; a real server restart has not been exercised yet.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-261">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.261">1.2.261</a> &middot; Session stats count Sun, Moon and Star</h3>
         <ul>
