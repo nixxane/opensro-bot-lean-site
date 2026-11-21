@@ -127,6 +127,15 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-278">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.278">1.2.278</a> &middot; A full bag now says why the town trip stops</h3>
+        <ul>
+          <li>When the character bag is nearly full and nothing in it can be sold or stored, the trip now warns you on arrival in town. It still sells the pet&rsquo;s loot, then stops before walking back, as before.</li>
+          <li>The stop message now explains why: selling pet loot does not free bag space, because the loot only passes through one bag slot. It also tells you what to change: turn on &ldquo;Sell ordinary gear from the character bag too&rdquo;, add Sell or Store item rules, or clear some bag space.</li>
+          <li>With bag selling already on, it reminds you that only ordinary Chinese / European gear sells from the bag without a Sell rule.</li>
+          <li>Only the messages changed; the trip itself works as before. Tested in simulation, not in a live game.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-276">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.276">1.2.276</a> &middot; Optional auto-login after a server restart</h3>
         <ul>
