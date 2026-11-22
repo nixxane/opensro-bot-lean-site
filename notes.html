@@ -127,6 +127,15 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-284">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.284">1.2.284</a> &middot; No more reload after an unconfirmed alchemy attempt</h3>
+        <ul>
+          <li>Fixed: after an alchemy attempt the bot could not confirm, it said &ldquo;Previous attempt is unconfirmed&rdquo; on every start until you reloaded the page.</li>
+          <li>Now, a few seconds after such an attempt, once the game is quiet, the bot checks the bag. If its elixir or stone was used, the log says so and asks you to check the item; if nothing was used, it says the attempt was not carried out. Either way you can start again without a reload.</li>
+          <li>The bot still never sends an attempt again by itself.</li>
+          <li>Tested in simulation, not in a live game.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-283">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.283">1.2.283</a> &middot; Gold amounts with dots</h3>
         <ul>
