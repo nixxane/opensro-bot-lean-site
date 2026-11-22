@@ -127,6 +127,18 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-282">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.282">1.2.282</a> &middot; Alchemy queue buys its own elixirs and stones</h3>
+        <ul>
+          <li>New in the Alchemy tab: &ldquo;Buy what the queue needs&rdquo;. Off by default, because it spends gold.</li>
+          <li>With it on, the queue first visits &ldquo;OpenSRO Alchemy&rdquo; in Jangan and buys what the queued items need at their degree: elixirs, lucky powder, Luck/Steady/Immortal/Astral, white and blue stones.</li>
+          <li>You set how many of each to have in the bag, the most gold one visit may spend (20 million by default) and the gold it always keeps (1 million by default).</li>
+          <li>When an item runs out on the way, the queue goes to the merchant once more before skipping that item.</li>
+          <li>Only what the merchant sells is bought. Every purchase is confirmed by the bag; one that is not confirmed is never sent again.</li>
+          <li>Start the queue in Jangan. The bot remembers where it saw the merchant, so later it walks there from anywhere in town.</li>
+          <li>Tested in simulation only. This is the first version that buys from that merchant; try it with a small gold limit first.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-281">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.281">1.2.281</a> &middot; Alchemy queue: full item names</h3>
         <ul>
