@@ -127,6 +127,16 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-285">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.285">1.2.285</a> &middot; Alchemy buying keeps going until the stones are done</h3>
+        <ul>
+          <li>Fixed: when the bought stones ran out, the queue went back to the merchant only once per item, so the other stones (Str after Int, say) were never bought and the item was skipped.</li>
+          <li>Now it goes back every time an item runs out, as long as the last visit bought something.</li>
+          <li>The gold limit is now for the whole queue run, not per visit: &ldquo;Spend at most this much gold per queue run&rdquo;. New default: 100.000.000. A limit you already set stays as it is, so raise it if you want more stones per run.</li>
+          <li>When the limit is used up, the log says so, and the item is skipped or the queue stops, as you set.</li>
+          <li>Tested in simulation, not in a live game.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-284">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.284">1.2.284</a> &middot; No more reload after an unconfirmed alchemy attempt</h3>
         <ul>
