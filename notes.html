@@ -127,6 +127,15 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-289">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.289">1.2.289</a> &middot; Reload stuck game pages from the live dashboard</h3>
+        <ul>
+          <li>Live dashboard: a new Reload all button reloads the game pages a game server restart left on the login screen. NIX logs back in and resumes hunting if it was hunting, even after a long restart.</li>
+          <li>It only reloads characters that are not in the game, so a healthy page is never cut off.</li>
+          <li>Off by default: turn on Allow Reload from the dashboard in Settings, Live dashboard, for each character. Allow Start and Stop does not include it.</li>
+          <li>Contributed by alexg-93 (#112). Tested in simulation and in a browser with fake characters, not in a live game.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-288">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.288">1.2.288</a> &middot; Alchemy queue: no more picking the elixir by hand</h3>
         <ul>
