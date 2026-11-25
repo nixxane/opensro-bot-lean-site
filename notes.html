@@ -127,6 +127,15 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-288">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.288">1.2.288</a> &middot; Alchemy queue: no more picking the elixir by hand</h3>
+        <ul>
+          <li>Fixed: an item in the alchemy queue kept the elixir picked last. With the other grade of elixir in the bag it stopped on &ldquo;no elixirs&rdquo; until you picked one by hand.</li>
+          <li>New queue items now start on &ldquo;Any compatible elixir&rdquo;.</li>
+          <li>A picked elixir is used first, and when none of it is left, any other elixir of the same kind is used. This also helps queues you already saved.</li>
+          <li>Tested in simulation, not in a live game.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-287">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.287">1.2.287</a> &middot; Shields, armour and accessories get their own elixirs</h3>
         <ul>
