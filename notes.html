@@ -127,6 +127,14 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-290">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.290">1.2.290</a> &middot; Town trips no longer stop on gear the smith won&rsquo;t repair</h3>
+        <ul>
+          <li>A town trip stopped with &ldquo;Repairs were not confirmed&rdquo; every time when you carried worn gear the smith never repairs: items with a &ldquo;not repairable&rdquo; option and items with only one repair left. The bot now leaves those out, just as the smith does, and they no longer start a trip for low durability either.</li>
+          <li>The bot now works out each item&rsquo;s full durability exactly as the server does. Some items with a durability bonus read one point higher before, so a repaired item never looked fully repaired.</li>
+          <li>Tested in simulation, not in a live game. Running out of gold at the smith still stops the trip with the same message.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-289">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.289">1.2.289</a> &middot; Reload stuck game pages from the live dashboard</h3>
         <ul>
