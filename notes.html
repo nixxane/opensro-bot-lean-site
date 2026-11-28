@@ -127,6 +127,14 @@
         </div>
         <section id="patch-notes">
         <h2 class="visually-hidden">All releases</h2>
+      <article class="release" id="v1-2-291">
+        <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.291">1.2.291</a> &middot; Item mall HP+ and MP+ potions are kept active</h3>
+        <ul>
+          <li>&ldquo;Keep an HP increase scroll active&rdquo; and &ldquo;Keep an MP increase scroll active&rdquo; never used the Item mall HP+ and MP+ potions (HP+430 up to HP+4100, the same for MP), so a +1900 potion in the bag was never drunk. Both options now use them, biggest first, after the 2-minute HP/MP 1000 scrolls and before the 500 HP/MP scrolls.</li>
+          <li>The options are now called &ldquo;Keep an HP increase scroll or HP+ potion active&rdquo; and the same for MP, under Potions.</li>
+          <li>Tested in simulation, not in a live game. These potions raise max HP/MP for 30 minutes; they are not healing potions, so the HP and MP potion settings do not use them.</li>
+        </ul>
+      </article>
       <article class="release" id="v1-2-290">
         <h3><a href="https://github.com/nixxane/opensro-bot-lean/releases/tag/v1.2.290">1.2.290</a> &middot; Town trips no longer stop on gear the smith won&rsquo;t repair</h3>
         <ul>
